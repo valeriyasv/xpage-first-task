@@ -735,7 +735,7 @@ strong {
   position: relative;
 }
 .site-list__item--after::after {
-  content: url("../../src/img/icons/icon-tick.svg");
+  content: url("../img/icons/icon-tick.svg");
   position: absolute;
   width: 8px;
   bottom: 5%;

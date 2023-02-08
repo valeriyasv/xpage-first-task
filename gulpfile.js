@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import pug from 'gulp-pug';
-// import browser from 'browser-sync';
+import browser from 'browser-sync';
 
 
  const gulpPug = () => {
@@ -21,19 +21,35 @@ const styles = () => {
     .pipe(browser.stream());
 }
 
-// const server = (done) => {
-//   return browser.init({
-//   server: {
-//   baseDir: 'build'
-//   },
-//   cors: true,
-//   notify: false,
-//   ui: false,
-//   }),
-//   done();
-// }
+const copy = (done) => {
+  gulp.src([
+  'src/fonts/*.{ttf}',
+  ], {
+  base: 'src'
+  })
+  .pipe(gulp.dest('build'))
+  done();
+  }
+
+  const copyImages = () => {
+    return gulp.src('src/img/**/*.{jpg,svg}')
+    .pipe(gulp.dest('build/img'))
+    }
+
+const server = (done) => {
+  return browser.init({
+  server: {
+  baseDir: 'build'
+  },
+  cors: true,
+  notify: false,
+  ui: false,
+  }),
+  done();
+}
 
 export const build = gulp.series(
+  copy,
   gulp.parallel(
   styles,
   gulpPug,
@@ -46,4 +62,7 @@ export const build = gulp.series(
   }
 
 export default gulp.series(
+  copy,
+  copyImages,
+  server,
   watcher);
