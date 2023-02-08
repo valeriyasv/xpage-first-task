@@ -31,10 +31,10 @@ const copy = (done) => {
   done();
   }
 
-  const copyImages = () => {
-    return gulp.src('src/img/**/*.{jpg,svg}')
-    .pipe(gulp.dest('build/img'))
-    }
+const copyImages = () => {
+  return gulp.src('src/img/**/*.{jpg,svg}')
+  .pipe(gulp.dest('build/img'))
+  }
 
 const server = (done) => {
   return browser.init({
@@ -50,16 +50,17 @@ const server = (done) => {
 
 export const build = gulp.series(
   copy,
+  copyImages,
   gulp.parallel(
   styles,
   gulpPug,
   ),
-  );
+);
 
- const watcher = () => {
+const watcher = () => {
   gulp.watch('src/sass/**/*.scss', gulp.series(styles));
   gulp.watch('src/*.pug', gulp.series(gulpPug));
-  }
+}
 
 export default gulp.series(
   copy,
