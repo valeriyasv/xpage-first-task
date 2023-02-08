@@ -5,13 +5,35 @@
   flex-direction: column;
   gap: 59px;
   border-bottom: $border-bottom;
-  // position: relative;
 }
 
 .main-header__button {
   color: $accent-color;
   border: 2px solid $accent-color;
   width: 224px;
+}
+
+.main-header__toggle {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.div .active {
+  transform: rotate(90deg);
+  margin-left: auto;
+  transition: 1.5s;
+}
+
+.div {
+  // width: 100%;
+  transform: rotate(0deg);
+  transition: 1.5s;
+  z-index: 3;
+  margin-left: 0px;
+  position: relative;
+  display: block;
+  cursor: pointer;
 }
 
 .main-header__interact {

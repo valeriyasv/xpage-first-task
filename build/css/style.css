@@ -65,7 +65,8 @@ strong {
 }
 
 a {
-  display: block;
+  text-decoration: none;
+  color: currentColor;
 }
 
 .main-header {
@@ -82,6 +83,28 @@ a {
   color: #9f0023;
   border: 2px solid #9f0023;
   width: 224px;
+}
+
+.main-header__toggle {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.div .active {
+  transform: rotate(90deg);
+  margin-left: auto;
+  transition: 1.5s;
+}
+
+.div {
+  transform: rotate(0deg);
+  transition: 1.5s;
+  z-index: 3;
+  margin-left: 0px;
+  position: relative;
+  display: block;
+  cursor: pointer;
 }
 
 .main-header__interact {
@@ -169,6 +192,24 @@ a {
   .main-nav__social {
     margin: 0;
   }
+}
+
+.main-nav--opened .main-nav__list {
+  display: block;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  position: absolute;
+  background-color: #ffffff;
+  gap: 20px;
+  padding: 20px 40px;
+  margin: 0;
+  left: 0;
+  top: 52px;
+  z-index: 2;
+  font-size: 18px;
+  transition: right 0.9s ease 0s;
+  overflow: auto;
 }
 
 .social__slogan {
@@ -418,6 +459,7 @@ a {
   font-weight: 700;
   position: relative;
   font-family: inherit;
+  cursor: pointer;
 }
 .slider__button-num--current::after {
   content: "";
@@ -433,6 +475,7 @@ a {
 .slider__button-arrow {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .slider__numbers {

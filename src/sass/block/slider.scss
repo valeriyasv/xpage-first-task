@@ -17,6 +17,7 @@
   font-weight: 700;
   position: relative;
   font-family: inherit;
+  cursor: pointer;
 
   &--current {
     &::after {
@@ -35,6 +36,7 @@
 .slider__button-arrow {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .slider__numbers {

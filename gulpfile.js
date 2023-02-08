@@ -3,6 +3,7 @@ import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import pug from 'gulp-pug';
 import browser from 'browser-sync';
+import terser from 'gulp-terser';
 
 
  const gulpPug = () => {
@@ -34,7 +35,13 @@ const copy = (done) => {
 const copyImages = () => {
   return gulp.src('src/img/**/*.{jpg,svg}')
   .pipe(gulp.dest('build/img'))
-  }
+}
+
+const scripts = () => {
+  return gulp.src('src/js/*.js')
+  .pipe(terser())
+  .pipe(gulp.dest('build/js'));
+}
 
 const server = (done) => {
   return browser.init({
@@ -52,6 +59,7 @@ export const build = gulp.series(
   copy,
   copyImages,
   gulp.parallel(
+  scripts,
   styles,
   gulpPug,
   ),
@@ -59,6 +67,7 @@ export const build = gulp.series(
 
 const watcher = () => {
   gulp.watch('src/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('src/js/script.js', gulp.series(scripts));
   gulp.watch('src/*.pug', gulp.series(gulpPug));
 }
 
@@ -66,4 +75,6 @@ export default gulp.series(
   copy,
   copyImages,
   server,
-  watcher);
+  watcher,
+  gulp.parallel(
+    scripts));
