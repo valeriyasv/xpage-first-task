@@ -15,7 +15,7 @@ mixin card(tag, date, title, src)
 
 mixin card-main(tag, date, title, text, image)
   a(href='new.html').card__link
-    li.news-cards__item.news-cards__item--main
+    .news-cards__item.news-cards__item--main
       article.card.card--main
         .card__image.card__image--main
           img(src= image width='468' height='264').card__pict

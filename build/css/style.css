@@ -64,6 +64,10 @@ strong {
   display: block;
 }
 
+a {
+  display: block;
+}
+
 .main-header {
   font-weight: 700;
   font-size: 20px;
@@ -220,6 +224,12 @@ strong {
   padding: 20px;
   color: inherit;
   border: 2px solid #373334;
+}
+.main-page__select--calen {
+  background-image: url("../img/icons/icon-calendar.svg");
+  background-repeat: no-repeat;
+  background-position: 24px center;
+  padding-left: 64px;
 }
 
 .main-page__sorting {
