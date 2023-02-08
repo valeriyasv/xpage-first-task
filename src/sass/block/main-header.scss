@@ -34,6 +34,10 @@
   position: relative;
   display: block;
   cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .main-header__interact {
@@ -41,6 +45,7 @@
   flex-direction: row;
   gap: 44px;
   align-items: center;
+  justify-content: center;
 }
 
 .main-header__contact {
@@ -50,11 +55,11 @@
 .main-header__inner {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   justify-content: space-between;
   gap: 25px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     justify-content: space-between;
     flex-direction: row;
   }
@@ -64,5 +69,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 30px;
 }
