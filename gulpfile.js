@@ -23,7 +23,7 @@ const styles = () => {
 
 const copy = (done) => {
   gulp.src([
-  'src/fonts/*.{ttf}',
+  'src/fonts/*.ttf',
   ], {
   base: 'src'
   })

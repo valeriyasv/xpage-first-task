@@ -416,6 +416,18 @@ a {
   padding: 0;
   margin: 0;
   font-weight: 700;
+  position: relative;
+  font-family: inherit;
+}
+.slider__button-num--current::after {
+  content: "";
+  width: 16px;
+  height: 2px;
+  background-color: #9f0023;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: -4px;
 }
 
 .slider__button-arrow {
@@ -666,6 +678,7 @@ a {
   width: 100%;
   max-width: 338px;
   border-bottom: 2px solid #ffffff;
+  color: #ffffff;
 }
 .feadback__input::placeholder {
   font-size: 16px;
@@ -738,6 +751,7 @@ a {
   font-size: 16px;
   border-radius: 56px;
   height: 50px;
+  font-family: inherit;
   cursor: pointer;
 }
 
