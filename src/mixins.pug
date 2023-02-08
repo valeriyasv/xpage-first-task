@@ -24,7 +24,7 @@ mixin card-main(tag, date, title, text, image)
             .card__tags
               span.card__tag= tag
               span.card__date= date
-            h3.card__title= title
+            h3.card__title.card__title--main= title
             p.card__text= text
-          button.card__arow
+          button.card__arow.card__arow--main
             img(src='img/icons/icon-arow.svg' width='21' height='18')

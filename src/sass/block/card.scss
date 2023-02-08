@@ -14,8 +14,8 @@
       flex-direction: row;
     }
 
-    @media (min-width: $desktop-width) {
-      padding: 50px;
+    @media (min-width: 1600px) {
+      position: relative;
     }
   }
 }
@@ -53,10 +53,16 @@
       max-width: 400px;
       margin-left: 50px;
       margin-top: 0;
+      display: flex;
     }
 
     @media (min-width: 1600px) {
       max-width: 600px;
+    }
+
+    @media (min-width: 1600px) {
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
 }
@@ -74,12 +80,26 @@
     @media (min-width: $tablet-width) {
       font-size: 20px;
     }
+
+    &--main {
+      @media (min-width: $desktop-width) {
+        margin-bottom: 70px;
+      }
+    }
 }
 
 .card__arow {
   margin-top: auto;
   border: none;
   background-color: transparent;
+
+  &--main {
+    @media (min-width: 1600px) {
+      position: absolute;
+      bottom: 50px;
+      right: 50px;
+    }
+  }
 }
 
 .card__image {
