@@ -339,6 +339,12 @@ strong {
   color: #373334;
 }
 
+.card__link-main {
+  cursor: pointer;
+  text-decoration: none;
+  color: #373334;
+}
+
 .news-cards {
   padding: 0;
   margin: 0;

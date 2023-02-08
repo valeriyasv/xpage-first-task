@@ -2,21 +2,11 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import pug from 'gulp-pug';
-// import postcss from 'gulp-postcss';
-// import csso from 'postcss-csso';
-// import rename from 'gulp-rename';
-// import autoprefixer from 'autoprefixer';
-// import squoosh from 'gulp-libsquoosh';
-// import svgo from 'svgo';
-// import svgstore from 'svgstore';
 import browser from 'browser-sync';
-// import htmlmin from 'gulp-htmlmin';
-// import { deleteAsync } from 'del';
-// import terser from 'gulp-terser';
+import browser from 'browser-sync';
 
 
-
-export const gulpPug = () => {
+ const gulpPug = () => {
   return gulp.src('src/*.pug')
     .pipe(pug({
       pretty:true
@@ -32,6 +22,24 @@ const styles = () => {
     .pipe(browser.stream());
 }
 
+const server = (done) => {
+  return browser.init({
+  server: {
+  baseDir: 'build'
+  },
+  cors: true,
+  notify: false,
+  ui: false,
+  }),
+  done();
+}
+
+export const build = gulp.series(
+  gulp.parallel(
+  styles,
+  gulpPug,
+  ),
+  );
 
  const watcher = () => {
   gulp.watch('src/sass/**/*.scss', gulp.series(styles));
