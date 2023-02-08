@@ -50,19 +50,15 @@
   &--main {
 
     @media (min-width: $desktop-width) {
-      max-width: 400px;
       margin-left: 50px;
       margin-top: 0;
       display: flex;
     }
 
     @media (min-width: 1600px) {
-      max-width: 600px;
-    }
-
-    @media (min-width: 1600px) {
       flex-direction: row;
       justify-content: space-between;
+      max-width: 600px;
     }
   }
 }
@@ -115,6 +111,7 @@
   }
 
   &--main {
+    flex-shrink: 0;
     &::after {
       content: '';
       background: none;
