@@ -33,7 +33,7 @@ const copy = (done) => {
   }
 
 const copyImages = () => {
-  return gulp.src('src/img/**/*.{jpg,svg}')
+  return gulp.src('src/img/**/*.{jpg,svg,png}')
   .pipe(gulp.dest('build/img'))
 }
 
