@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import pug from 'gulp-pug';
-import browser from 'browser-sync';
+// import browser from 'browser-sync';
 
 
  const gulpPug = () => {
@@ -21,17 +21,17 @@ const styles = () => {
     .pipe(browser.stream());
 }
 
-const server = (done) => {
-  return browser.init({
-  server: {
-  baseDir: 'build'
-  },
-  cors: true,
-  notify: false,
-  ui: false,
-  }),
-  done();
-}
+// const server = (done) => {
+//   return browser.init({
+//   server: {
+//   baseDir: 'build'
+//   },
+//   cors: true,
+//   notify: false,
+//   ui: false,
+//   }),
+//   done();
+// }
 
 export const build = gulp.series(
   gulp.parallel(
@@ -46,5 +46,4 @@ export const build = gulp.series(
   }
 
 export default gulp.series(
-  server,
   watcher);
