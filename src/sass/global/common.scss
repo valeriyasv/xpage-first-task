@@ -1,0 +1,39 @@
+body {
+  color: $main-color;
+  margin: 0;
+  font-family: 'Frank', sans-serif;
+  line-height: 135%;
+  background-color: $main-back-color;
+  font-size: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+article {
+  display: block;
+}
+
+img {
+  display: block;
+}
+
+small {
+  font-size: 12px;
+  line-height: 162%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+}
+
+span {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+strong {
+  display: block;
+}
+

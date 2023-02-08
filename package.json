@@ -1,0 +1,40 @@
+{
+  "name": "xpage-first-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valeriyasv/xpage-first-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valeriyasv/xpage-first-task/issues"
+  },
+  "homepage": "https://github.com/valeriyasv/xpage-first-task#readme",
+  "dependencies": {
+    "gulp-browser": "^3.0.11",
+    "gulp-dart-sass": "^1.0.2",
+    "plumber": "^0.4.8",
+    "pug": "^3.0.2",
+    "sass": "^1.58.0",
+    "stream-browserify": "^3.0.0",
+    "svg-sprite": "^2.0.2",
+    "svgo": "^3.0.2",
+    "svgstore": "^3.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0"
+  }
+}

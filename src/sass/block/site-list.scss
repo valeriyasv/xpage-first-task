@@ -1,0 +1,15 @@
+.site-list__item {
+  &--after {
+    position: relative;
+
+    &::after {
+      content: url('../../src/img/icons/icon-tick.svg');
+      position: absolute;
+      width: 8px;
+      // height: 4px;
+      // background-image: url('../../src/img/icons/icon-tick.svg');
+      bottom: 5%;
+      margin-left: 8px;
+    }
+  }
+}

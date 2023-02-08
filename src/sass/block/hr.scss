@@ -1,0 +1,10 @@
+.hr {
+  max-width: 339px;
+  height: 2px;
+  background-color: $main-color;
+  margin: 14px 0 14px;
+
+  @media (min-width: $desktop-width) {
+   width: 100%;
+  }
+}

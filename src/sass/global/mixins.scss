@@ -1,0 +1,9 @@
+@mixin font-header {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@mixin tags {
+  font-size: 16px;
+  color: $light-color;
+}

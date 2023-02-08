@@ -1,0 +1,30 @@
+mixin card(tag, date, title, src)
+  a(href='#').card__link
+    li.news-cards__item
+      article.card
+        .card__image
+          img(src= src width='468' height='264').card__pict
+        .card__content
+          .card__desc
+            .card__tags
+              span.card__tag= tag
+              span.card__date= date
+            h3.card__title= title
+          button.card__arow
+            img(src='../src/img/icons/icon-arow.svg'  width='21' height='18').card__arow
+
+mixin card-main(tag, date, title, text, image)
+  a(href='new.html').card__link
+    li.news-cards__item.news-cards__item--main
+      article.card.card--main
+        .card__image.card__image--main
+          img(src= image width='468' height='264').card__pict
+        .card__content.card__content--main
+          .card__desc
+            .card__tags
+              span.card__tag= tag
+              span.card__date= date
+            h3.card__title= title
+            p.card__text= text
+          button.card__arow
+            img(src='../src/img/icons/icon-arow.svg' width='21' height='18')
