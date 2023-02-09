@@ -26,7 +26,6 @@
   display: none;
 
   @media (min-width: $desktop-width) {
-    display: block;
     display: flex;
     flex-direction: row;
     gap: 48px;
@@ -55,32 +54,33 @@
 }
 
 .main-nav--opened .main-nav__list {
-    display: block;
-    width: 100%;
-    flex-direction: column;
-    display: flex;
-    position: absolute;
-    background-color: #ffffff;
-    gap: 20px;
-    padding: 20px 40px;
-    margin: 0;
-    left: 0;
-    top: 52px;
-    z-index: 2;
-    font-size: 18px;
-    transition: right 0.9s ease 0s;
-    overflow: auto;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  position: absolute;
+  background-color: #ffffff;
+  gap: 20px;
+  padding: 20px 40px;
+  margin: 0;
+  left: 0;
+  top: 52px;
+  z-index: 2;
+  font-size: 18px;
+  transition: right 0.9s ease 0s;
+  overflow: auto;
 
-    @media (min-width: $desktop-width) {
-      display: block;
-      display: flex;
-      flex-direction: row;
-      gap: 48px;
-      justify-content: center;
-      align-items: center;
-      padding: 0;
-      background-color: transparent;
-      margin: 0;
-      position: static;
-    }
+  @media (min-width: $tablet-width) {
+    text-align: center;
   }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    gap: 48px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: transparent;
+    margin: 0;
+    position: static;
+  }
+}

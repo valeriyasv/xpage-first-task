@@ -177,7 +177,6 @@ a {
 }
 @media (min-width: 1200px) {
   .main-nav__list {
-    display: block;
     display: flex;
     flex-direction: row;
     gap: 48px;
@@ -208,7 +207,6 @@ a {
 }
 
 .main-nav--opened .main-nav__list {
-  display: block;
   width: 100%;
   flex-direction: column;
   display: flex;
@@ -224,10 +222,13 @@ a {
   transition: right 0.9s ease 0s;
   overflow: auto;
 }
+@media (min-width: 768px) {
+  .main-nav--opened .main-nav__list {
+    text-align: center;
+  }
+}
 @media (min-width: 1200px) {
   .main-nav--opened .main-nav__list {
-    display: block;
-    display: flex;
     flex-direction: row;
     gap: 48px;
     justify-content: center;
@@ -432,6 +433,11 @@ a {
   cursor: pointer;
   text-decoration: none;
   color: #373334;
+  display: flex;
+  height: 100%;
+}
+.card__link--main {
+  display: block;
 }
 
 .card__link-main {
@@ -766,6 +772,7 @@ a {
   max-width: 338px;
   border-bottom: 2px solid #ffffff;
   color: #ffffff;
+  font-size: 16px;
 }
 .feadback__input::placeholder {
   font-size: 16px;
@@ -800,6 +807,8 @@ a {
   max-width: 985px;
   border-bottom: 2px solid #ffffff;
   resize: none;
+  color: #ffffff;
+  font-size: 16px;
 }
 .feadback__textarea::placeholder {
   font-size: 16px;

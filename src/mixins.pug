@@ -14,7 +14,7 @@ mixin card(tag, date, title, src)
             img(src='img/icons/icon-arow.svg'  width='21' height='18').card__arow
 
 mixin card-main(tag, date, title, text, image)
-  a(href='new.html').card__link
+  a(href='new.html').card__link.card__link--main
     .news-cards__item.news-cards__item--main
       article.card.card--main
         .card__image.card__image--main
