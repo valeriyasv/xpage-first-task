@@ -91,13 +91,13 @@ a {
   padding: 0;
 }
 
-.div .active {
+.main-header__burger .active {
   transform: rotate(90deg);
   margin-left: auto;
   transition: 1.5s;
 }
 
-.div {
+.main-header__burger {
   transform: rotate(0deg);
   transition: 1.5s;
   z-index: 3;
@@ -107,7 +107,7 @@ a {
   cursor: pointer;
 }
 @media (min-width: 1200px) {
-  .div {
+  .main-header__burger {
     display: none;
   }
 }

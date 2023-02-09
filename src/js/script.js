@@ -1,6 +1,6 @@
 let navMain = document.querySelector('.main-nav');
-let navToggle = document.querySelector('.div');
-let imageBurger = document.querySelector('.main-header__burger');
+let navToggle = document.querySelector('.main-header__burger');
+let imageBurger = document.querySelector('.main-header__burger-img');
 navMain.classList.remove('main-nav--nojs');
 
 navToggle.addEventListener('click', function () {
