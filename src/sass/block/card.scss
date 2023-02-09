@@ -36,7 +36,7 @@
 
 .card__tags {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   flex-wrap: wrap;
   gap: 40px;
 }
@@ -135,4 +135,109 @@
   cursor: pointer;
   text-decoration: none;
   color: $main-color;
+}
+
+.select {
+  position: relative;
+  width: 468px;
+  height: 40px;
+  margin: 0 auto;
+  font-family: 'Frank', sans-serif;
+  font-size: 16px;
+
+  &[data-state="active"] {
+    .select__title {
+      &::before {
+        transform: translate(-3px, -50%) rotate(-45deg);
+      }
+
+      &::after {
+        transform: translate(3px, -50%) rotate(45deg);
+      }
+    }
+
+    .select__content {
+      opacity: 1;
+    }
+
+    .select__label + .select__input + .select__label {
+      max-height: 40px;
+      border-top-width: 1px;
+    }
+  }
+}
+.select__title {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 8px 24px;
+  border: solid 2px $main-color;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 24px;
+    display: block;
+    width: 10px;
+    height: 2px;
+    transition: all 0.3s ease-out;
+    background-color: $main-color;
+    transform: translate(-3px, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(3px, -50%) rotate(-45deg);
+  }
+
+  &:hover {
+
+    &::before,
+    &::after {
+      background-color: $main-color;
+    }
+  }
+}
+
+.select__content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  width: 468px;
+  background-color: #f2f2f2;
+  border: 2px solid $main-color;
+  border-top: none;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  z-index: 8;
+  padding: 20px 24px;
+}
+
+.select__input {
+  display: none;
+
+  &:disabled + label {
+    opacity: 0.6;
+
+    &:hover {
+      color: currentColor;
+      cursor: auto;
+    }
+  }
+}
+
+.select__label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    color: $accent-color;
+  }
 }

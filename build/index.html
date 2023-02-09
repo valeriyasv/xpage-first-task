@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/style.css" rel="stylesheet">
     <title>News</title>
+    <link rel="preload" href="fonts/frankbold.woff2" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="fonts/frankregular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="fonts/franklight.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   </head>
   <body>
     <div class="wrapper">
@@ -51,14 +54,25 @@
             <select class="main-page__select main-page__select--calen">
               <option value="calendar">02/02/2021</option>
             </select>
-            <select class="main-page__select">
-              <option value="medicine">Медицина</option>
-              <option value="society">Общество</option>
-              <option value="communal">Коммуналка</option>
-              <option value="policy">Политика</option>
-              <option value="sport">Спорт</option>
-              <option value="development">Вектор развития</option>
-            </select>
+            <form>
+              <div class="select" data-state="">
+                <div class="select__title" data-default="Choose">Выбрать рубрику</div>
+                <div class="select__content">
+                  <input class="select__input" id="singleSelect0" type="radio" name="singleSelect" disabled>
+                  <label class="select__label" for="singleSelect0">Медицина</label>
+                  <input class="select__input" id="singleSelect1" type="radio" name="singleSelect">
+                  <label class="select__label" for="singleSelect1">Общество</label>
+                  <input class="select__input" id="singleSelect2" type="radio" name="singleSelect">
+                  <label class="select__label" for="singleSelect2">Коммуналка</label>
+                  <input class="select__input" id="singleSelect3" type="radio" name="singleSelect">
+                  <label class="select__label" for="singleSelect3">Политика</label>
+                  <input class="select__input" id="singleSelect4" type="radio" name="singleSelect">
+                  <label class="select__label" for="singleSelect4">Спорт</label>
+                  <input class="select__input" id="singleSelect4" type="radio" name="singleSelect">
+                  <label class="select__label" for="singleSelect4">Вектор развития</label>
+                </div>
+              </div>
+            </form>
           </div>
           <div class="news-cards">
             <ul class="news-cards__list"><a class="card__link" href="#">
@@ -67,7 +81,7 @@
                                   <div class="card__image"><img class="card__pict" src="img/image-item1.jpg" width="468" height="264"></div>
                                   <div class="card__content">
                                     <div class="card__desc">
-                                      <div class="card__tags"><span class="card__tag">Медицина</span><span class="card__date">02/02/2021</span></div>
+                                      <div class="card__tags"><span class="card__tag">Медицина</span><span class="card__tag">Общество</span><span class="card__date">02/02/2021</span></div>
                                       <h3 class="card__title">Благодаря поддержке предпринимателей. Златоустовские поликлиники оснастили холодильными установками для хранения вакцины</h3>
                                     </div>
                                     <button class="card__arow"><img class="card__arow" src="img/icons/icon-arow.svg" width="21" height="18"></button>

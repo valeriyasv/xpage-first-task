@@ -13,6 +13,22 @@ mixin card(tag, date, title, src)
           button.card__arow
             img(src='img/icons/icon-arow.svg'  width='21' height='18').card__arow
 
+mixin cardTags(tag, tagTwo, date, title, src)
+  a(href='#').card__link
+    li.news-cards__item
+      article.card
+        .card__image
+          img(src= src width='468' height='264').card__pict
+        .card__content
+          .card__desc
+            .card__tags
+              span.card__tag= tag
+              span.card__tag= tagTwo
+              span.card__date= date
+            h3.card__title= title
+          button.card__arow
+            img(src='img/icons/icon-arow.svg'  width='21' height='18').card__arow
+
 mixin card-main(tag, date, title, text, image)
   a(href='new.html').card__link.card__link--main
     .news-cards__item.news-cards__item--main

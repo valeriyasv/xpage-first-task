@@ -6,6 +6,9 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(href="./css/style.css" rel="stylesheet")
     title News
+    link(rel="preload" href="fonts/frankbold.woff2" as="font" type="font/ttf" crossorigin="anonymous")
+    link(rel="preload" href="fonts/frankregular.ttf" as="font" type="font/ttf" crossorigin="anonymous")
+    link(rel="preload" href="fonts/franklight.ttf" as="font" type="font/ttf" crossorigin="anonymous")
   body
     .wrapper
       include header.pug
@@ -17,17 +20,26 @@ html(lang="ru")
           .main-page__sorting
             select.main-page__select.main-page__select--calen
               option(value="calendar") 02/02/2021
-            select.main-page__select
-              option(value="medicine") Медицина
-              option(value="society") Общество
-              option(value="communal") Коммуналка
-              option(value="policy") Политика
-              option(value="sport") Спорт
-              option(value="development") Вектор развития
+            form
+              .select(data-state="")
+                .select__title(data-default="Choose") Выбрать рубрику
+                .select__content
+                  input(id="singleSelect0" class="select__input" type="radio" name="singleSelect" disabled)
+                  label(for="singleSelect0" class="select__label") Медицина
+                  input(id="singleSelect1" class="select__input" type="radio" name="singleSelect")
+                  label(for="singleSelect1" class="select__label") Общество
+                  input(id="singleSelect2" class="select__input" type="radio" name="singleSelect")
+                  label(for="singleSelect2" class="select__label") Коммуналка
+                  input(id="singleSelect3" class="select__input" type="radio" name="singleSelect")
+                  label(for="singleSelect3" class="select__label") Политика
+                  input(id="singleSelect4" class="select__input" type="radio" name="singleSelect")
+                  label(for="singleSelect4" class="select__label") Спорт
+                  input(id="singleSelect4" class="select__input" type="radio" name="singleSelect")
+                  label(for="singleSelect4" class="select__label") Вектор развития
           .news-cards
             ul.news-cards__list
               include mixins.pug
-              +card('Медицина', '02/02/2021', 'Благодаря поддержке предпринимателей. Златоустовские поликлиники оснастили холодильными установками для хранения вакцины', 'img/image-item1.jpg')
+              +cardTags('Медицина', 'Общество', '02/02/2021', 'Благодаря поддержке предпринимателей. Златоустовские поликлиники оснастили холодильными установками для хранения вакцины', 'img/image-item1.jpg')
               +card('Медицина', '29/01/2021', 'Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля', 'img/image-item2.jpg')
               +card('Коммуналка', '29/01/2021', 'Осторожно, сосульки! Оттепель на этой неделе привела к тому, что на крышах многих домов образовались опасные ледяные наросты', 'img/image-item3.jpg')
               +card('Политика', '29/01/2021', 'В четыре раза меньше вопросов, чем обычно. В Златоусте прошло первое в 2021-м году Собрание депутатов', 'img/image-item4.jpg')
@@ -48,15 +60,3 @@ html(lang="ru")
                 img(src='img/icons/icon-arow-slide.svg' width='14' height='12')
     include footer
     script(src='js/script.js')
-
-
-
-
-
-
-
-
-
-
-
-

@@ -350,7 +350,7 @@ a {
 
 .card__tags {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   flex-wrap: wrap;
   gap: 40px;
 }
@@ -444,6 +444,93 @@ a {
   cursor: pointer;
   text-decoration: none;
   color: #373334;
+}
+
+.select {
+  position: relative;
+  width: 468px;
+  height: 40px;
+  margin: 0 auto;
+  font-family: "Frank", sans-serif;
+  font-size: 16px;
+}
+.select[data-state=active] .select__title::before {
+  transform: translate(-3px, -50%) rotate(-45deg);
+}
+.select[data-state=active] .select__title::after {
+  transform: translate(3px, -50%) rotate(45deg);
+}
+.select[data-state=active] .select__content {
+  opacity: 1;
+}
+.select[data-state=active] .select__label + .select__input + .select__label {
+  max-height: 40px;
+  border-top-width: 1px;
+}
+
+.select__title {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 8px 24px;
+  border: solid 2px #373334;
+  cursor: pointer;
+}
+.select__title::before, .select__title::after {
+  content: "";
+  position: absolute;
+  right: 24px;
+  display: block;
+  width: 10px;
+  height: 2px;
+  transition: all 0.3s ease-out;
+  background-color: #373334;
+  transform: translate(-3px, -50%) rotate(45deg);
+}
+.select__title::after {
+  transform: translate(3px, -50%) rotate(-45deg);
+}
+.select__title:hover::before, .select__title:hover::after {
+  background-color: #373334;
+}
+
+.select__content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  width: 468px;
+  background-color: #f2f2f2;
+  border: 2px solid #373334;
+  border-top: none;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  z-index: 8;
+  padding: 20px 24px;
+}
+
+.select__input {
+  display: none;
+}
+.select__input:disabled + label {
+  opacity: 0.6;
+}
+.select__input:disabled + label:hover {
+  color: currentColor;
+  cursor: auto;
+}
+
+.select__label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+.select__label:hover {
+  color: #9f0023;
 }
 
 .news-cards {
