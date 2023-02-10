@@ -9,17 +9,26 @@ html(lang="ru")
     link(rel="preload" href="fonts/frankbold.woff2" as="font" type="font/ttf" crossorigin="anonymous")
     link(rel="preload" href="fonts/frankregular.ttf" as="font" type="font/ttf" crossorigin="anonymous")
     link(rel="preload" href="fonts/franklight.ttf" as="font" type="font/ttf" crossorigin="anonymous")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
+    link(rel="icon" href="favicon.ico")
+    link(rel="icon" href="img/favicons/icon.svg" type="image/svg+xml")
+    link(rel="apple-touch-icon" href="img/favicons/apple.png")
+    link(rel="manifest" href="manifest.webmanifest")
   body
-    .wrapper
-      include header.pug
-      main.main-container
+    include header.pug
+    main.main-container
+      .wrapper
         section.main-page
           .main-page__txt
             h1.main-page__title Все новости
-            span.main-page__tag Главная / Новости
+            nav
+              ul.main-page__tag.breadcrumb
+                li.breadcrumb__item
+                  a(href='#').breadcrumb__link Главная
+                li.breadcrumb__item
+                  a(href='#').breadcrumb__link Новости
           .main-page__sorting
-            select.main-page__select.main-page__select--calen
-              option(value="calendar") 02/02/2021
+            input(type="date" class='calendar' placeholder='02/02/2021')
             form
               .select(data-state="")
                 .select__title(data-default="Choose") Выбрать рубрику
@@ -58,5 +67,8 @@ html(lang="ru")
                 button.slider__button-num 123
               button.slider__button-arrow
                 img(src='img/icons/icon-arow-slide.svg' width='14' height='12')
-    include footer
+  include footer
+    script(src="https://cdn.jsdelivr.net/npm/flatpickr")
     script(src='js/script.js')
+    script(src='js/burger.js')
+    script(src='js/select.js')

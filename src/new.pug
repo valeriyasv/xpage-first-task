@@ -6,14 +6,28 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(href="./css/style.css" rel="stylesheet")
     title New
+    link(rel="preload" href="fonts/frankbold.woff2" as="font" type="font/ttf" crossorigin="anonymous")
+    link(rel="preload" href="fonts/frankregular.ttf" as="font" type="font/ttf" crossorigin="anonymous")
+    link(rel="preload" href="fonts/franklight.ttf" as="font" type="font/ttf" crossorigin="anonymous")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
+    link(rel="icon" href="favicon.ico")
+    link(rel="icon" href="img/favicons/icon.svg" type="image/svg+xml")
+    link(rel="apple-touch-icon" href="img/favicons/apple.png")
+    link(rel="manifest" href="manifest.webmanifest")
   body
-    .wrapper
-      include header.pug
+    include header.pug
     main
-      article.page-new
-        .wrapper
+      .wrapper
+        article.page-new
           h2.page-new__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля
-          p.page-new__tag Главная / Новости / Медицина
+          nav
+            ul.main-page__tag.breadcrumb
+              li.breadcrumb__item
+                a(href='#').breadcrumb__link Главная
+              li.breadcrumb__item
+                a(href='#').breadcrumb__link Новости
+              li.breadcrumb__item
+                a(href='#').breadcrumb__link Медицина
           .container
             .page-new__info
               p.page-new__tag.page-new__tag--color Медицина

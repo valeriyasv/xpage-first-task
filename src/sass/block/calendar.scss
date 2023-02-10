@@ -1,0 +1,15 @@
+.calendar {
+  width: 466px;
+  border: 2px solid $main-color;
+  background-color: transparent;
+  height: 56px;
+  padding: 0;
+  outline: none;
+
+  &::placeholder {
+    font-family: inherit;
+    font-size: 16px;
+    color: inherit;
+  }
+}
+

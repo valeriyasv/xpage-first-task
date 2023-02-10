@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Frank";
   font-style: normal;
@@ -72,11 +73,7 @@ a {
 .main-header {
   font-weight: 700;
   font-size: 20px;
-  padding: 52px 0 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 59px;
-  border-bottom: 4px solid #373334;
+  padding: 52px 0 0;
 }
 
 .main-header__button {
@@ -150,8 +147,9 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
-  margin: 0;
+  padding: 0 0 24px;
+  margin: 39px 0 0;
+  border-bottom: 4px solid #373334;
 }
 @media (min-width: 768px) {
   .main-nav {
@@ -164,6 +162,7 @@ a {
   .main-nav {
     flex-direction: column;
     gap: 30px;
+    margin: 39px 0 0;
   }
 }
 @media (min-width: 1700px) {
@@ -537,11 +536,6 @@ a {
 .footer {
   background-color: #ffffff;
   padding: 59px 0 49px;
-}
-
-.footer__wrapper {
-  max-width: 80%;
-  margin: 0 auto;
 }
 
 .footer__slogan {
@@ -958,5 +952,40 @@ a {
 }
 .select__label:hover {
   color: #9f0023;
+}
+
+.calendar {
+  width: 466px;
+  border: 2px solid #373334;
+  background-color: transparent;
+  height: 56px;
+  padding: 0;
+  outline: none;
+}
+.calendar::placeholder {
+  font-family: inherit;
+  font-size: 16px;
+  color: inherit;
+}
+
+.breadcrumb {
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb__item {
+  display: inline;
+  font-size: 16px;
+}
+
+.breadcrumb li + li:before {
+  padding: 0;
+  color: #959595;
+  content: "/ ";
+}
+
+.breadcrumb__link {
+  color: #959595;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
