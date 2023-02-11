@@ -25,7 +25,10 @@
               <button class="main-header__toggle"><img class="main-header__burger-img" src="img/icons/burger.png" alt="Меню" width="22" height="22"></button>
             </div>
           </div>
-          <div class="main-header__interact"><a class="main-header__contact" href="tel:+73513651711">8 (3513) 65-17-11</a><a href="#"><img class="main-header__search" width="18" height="18" src="img/icons/icon-search.svg" alt="Поиск"></a></div>
+          <div class="main-header__interact"><a class="main-header__contact" href="tel:+73513651711">8 (3513) 65-17-11</a><a href="#">
+              <svg width="18" height="18">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+              </svg></a></div>
         </div>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <ul class="main-nav__list site-list">
@@ -39,11 +42,26 @@
           <div class="main-nav__social social">
             <p class="social__slogan">Подписывайтесь на нас:</p>
             <ul class="social__list">
-              <li class="social__item"><a href="#"><img src="img/icons/icon-yt.svg" alt="Ютуб" width="15" height="16"></a></li>
-              <li class="social__item"><a href="#"><img src="img/icons/icon-fc.svg" alt="Фэйсбук" width="16" height="16"></a></li>
-              <li class="social__item"><a href="#"><img src="img/icons/icon-vk.svg" alt="Вконтакте" width="18" height="18"></a></li>
-              <li class="social__item"><a href="#"><img src="img/icons/icon-ok.svg" alt="Одноклассники" width="16" height="16"></a></li>
-              <li class="social__item"><a href="#"><img src="img/icons/icon-insta.svg" alt="Инстаграмм" width="15" height="15"></a></li>
+              <li class="social__item"><a href="#">
+                  <svg width="15" height="16">
+                    <use xlink:href="img/sprite.svg#icon-yt"></use>
+                  </svg></a></li>
+              <li class="social__item"><a href="#">
+                  <svg width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-fc"></use>
+                  </svg></a></li>
+              <li class="social__item"><a href="#">
+                  <svg width="18" height="18">
+                    <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  </svg></a></li>
+              <li class="social__item"><a href="#">
+                  <svg width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-ok"></use>
+                  </svg></a></li>
+              <li class="social__item"><a href="#">
+                  <svg width="15" height="15">
+                    <use xlink:href="img/sprite.svg#icon-insta"></use>
+                  </svg></a></li>
             </ul>
           </div>
         </nav>
@@ -84,104 +102,108 @@
             </form>
           </div>
           <div class="news-cards">
-            <ul class="news-cards__list"><a class="card__link" href="#">
-                              <li class="news-cards__item">
-                                <article class="card">
-                                  <div class="card__image"><img class="card__pict" src="img/image-item1.jpg" width="468" height="264"></div>
-                                  <div class="card__content">
-                                    <div class="card__desc">
-                                      <div class="card__tags"><span class="card__tag">Медицина</span><span class="card__tag">Общество</span><span class="card__date">02/02/2021</span></div>
-                                      <h3 class="card__title">Благодаря поддержке предпринимателей. Златоустовские поликлиники оснастили холодильными установками для хранения вакцины</h3>
-                                    </div>
-                                    <button class="card__arow"><img class="card__arow" src="img/icons/icon-arow.svg" width="21" height="18"></button>
+            <div class="news-cards__list">
+                            <article class="card"><a class="card__link" href="#">
+                                <div class="card__image"><img class="card__pict" src="img/image-item1.jpg" width="468" height="264"></div>
+                                <div class="card__content">
+                                  <div class="card__desc">
+                                    <div class="card__tags"><span class="card__tag">Медицина</span><span class="card__tag">Общество</span><span class="card__date">02/02/2021</span></div>
+                                    <h3 class="card__title">Благодаря поддержке предпринимателей. Златоустовские поликлиники оснастили холодильными установками для хранения вакцины</h3>
                                   </div>
-                                </article>
-                              </li></a><a class="card__link" href="#">
-                              <li class="news-cards__item">
-                                <article class="card">
-                                  <div class="card__image"><img class="card__pict" src="img/image-item2.jpg" width="468" height="264"></div>
-                                  <div class="card__content">
-                                    <div class="card__desc">
-                                      <div class="card__tags"><span class="card__tag">Медицина</span><span class="card__date">29/01/2021</span></div>
-                                      <h3 class="card__title">Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля</h3>
-                                    </div>
-                                    <button class="card__arow"><img class="card__arow" src="img/icons/icon-arow.svg" width="21" height="18"></button>
-                                  </div>
-                                </article>
-                              </li></a><a class="card__link" href="#">
-                              <li class="news-cards__item">
-                                <article class="card">
-                                  <div class="card__image"><img class="card__pict" src="img/image-item3.jpg" width="468" height="264"></div>
-                                  <div class="card__content">
-                                    <div class="card__desc">
-                                      <div class="card__tags"><span class="card__tag">Коммуналка</span><span class="card__date">29/01/2021</span></div>
-                                      <h3 class="card__title">Осторожно, сосульки! Оттепель на этой неделе привела к тому, что на крышах многих домов образовались опасные ледяные наросты</h3>
-                                    </div>
-                                    <button class="card__arow"><img class="card__arow" src="img/icons/icon-arow.svg" width="21" height="18"></button>
-                                  </div>
-                                </article>
-                              </li></a><a class="card__link" href="#">
-                              <li class="news-cards__item">
-                                <article class="card">
-                                  <div class="card__image"><img class="card__pict" src="img/image-item4.jpg" width="468" height="264"></div>
-                                  <div class="card__content">
-                                    <div class="card__desc">
-                                      <div class="card__tags"><span class="card__tag">Политика</span><span class="card__date">29/01/2021</span></div>
-                                      <h3 class="card__title">В четыре раза меньше вопросов, чем обычно. В Златоусте прошло первое в 2021-м году Собрание депутатов</h3>
-                                    </div>
-                                    <button class="card__arow"><img class="card__arow" src="img/icons/icon-arow.svg" width="21" height="18"></button>
-                                  </div>
-                                </article>
-                              </li></a><a class="card__link" href="#">
-                              <li class="news-cards__item">
-                                <article class="card">
-                                  <div class="card__image"><img class="card__pict" src="img/image-item5.jpg" width="468" height="264"></div>
-                                  <div class="card__content">
-                                    <div class="card__desc">
-                                      <div class="card__tags"><span class="card__tag">Коммуналка</span><span class="card__date">02/02/2021</span></div>
-                                      <h3 class="card__title">В Златоусте сотрудники теротдела проверят магазин, из которого выбрасывали строительный мусор на контейнерную площадку</h3>
-                                    </div>
-                                    <button class="card__arow"><img class="card__arow" src="img/icons/icon-arow.svg" width="21" height="18"></button>
-                                  </div>
-                                </article>
-                              </li></a><a class="card__link" href="#">
-                              <li class="news-cards__item">
-                                <article class="card">
-                                  <div class="card__image"><img class="card__pict" src="img/image-item6.jpg" width="468" height="264"></div>
-                                  <div class="card__content">
-                                    <div class="card__desc">
-                                      <div class="card__tags"><span class="card__tag">Общество</span><span class="card__date">29/01/2021</span></div>
-                                      <h3 class="card__title">ДЧ: Первое Собрание депутатов 2021 года: планируется работа на весь год</h3>
-                                    </div>
-                                    <button class="card__arow"><img class="card__arow" src="img/icons/icon-arow.svg" width="21" height="18"></button>
-                                  </div>
-                                </article>
-                              </li></a>
-            </ul><a class="card__link card__link--main" href="new.html">
-                            <div class="news-cards__item news-cards__item--main">
-                              <article class="card card--main">
-                                <div class="card__image card__image--main"><img class="card__pict" src="img/image-item2.jpg" width="468" height="264"></div>
-                                <div class="card__content card__content--main">
+                                  <button class="card__arow">
+                                    <svg class="card__icon" width="21" height="18">
+                                      <use xlink:href="img/sprite.svg#icon-arow"></use>
+                                    </svg>
+                                  </button>
+                                </div></a></article>
+                            <article class="card"><a class="card__link" href="#">
+                                <div class="card__image"><img class="card__pict" src="img/image-item2.jpg" width="468" height="264"></div>
+                                <div class="card__content">
                                   <div class="card__desc">
                                     <div class="card__tags"><span class="card__tag">Медицина</span><span class="card__date">29/01/2021</span></div>
-                                    <h3 class="card__title card__title--main">Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля</h3>
-                                    <p class="card__text">Ещё одна главная новость дня — с 8 февраля златоустовский роддом возвращается к привычному формату работы. Госпитальную базу для лечения больных коронавирусной инфекцией переводят...</p>
+                                    <h3 class="card__title">Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля</h3>
                                   </div>
-                                  <button class="card__arow card__arow--main"><img src="img/icons/icon-arow.svg" width="21" height="18"></button>
+                                  <button class="card__arow">
+                                    <svg class="card__icon" width="21" height="18">
+                                      <use xlink:href="img/sprite.svg#icon-arow"></use>
+                                    </svg>
+                                  </button>
+                                </div></a></article>
+                            <article class="card"><a class="card__link" href="#">
+                                <div class="card__image"><img class="card__pict" src="img/image-item3.jpg" width="468" height="264"></div>
+                                <div class="card__content">
+                                  <div class="card__desc">
+                                    <div class="card__tags"><span class="card__tag">Коммуналка</span><span class="card__date">29/01/2021</span></div>
+                                    <h3 class="card__title">Осторожно, сосульки! Оттепель на этой неделе привела к тому, что на крышах многих домов образовались опасные ледяные наросты</h3>
+                                  </div>
+                                  <button class="card__arow">
+                                    <svg class="card__icon" width="21" height="18">
+                                      <use xlink:href="img/sprite.svg#icon-arow"></use>
+                                    </svg>
+                                  </button>
+                                </div></a></article>
+                            <article class="card"><a class="card__link" href="#">
+                                <div class="card__image"><img class="card__pict" src="img/image-item4.jpg" width="468" height="264"></div>
+                                <div class="card__content">
+                                  <div class="card__desc">
+                                    <div class="card__tags"><span class="card__tag">Политика</span><span class="card__date">29/01/2021</span></div>
+                                    <h3 class="card__title">В четыре раза меньше вопросов, чем обычно. В Златоусте прошло первое в 2021-м году Собрание депутатов</h3>
+                                  </div>
+                                  <button class="card__arow">
+                                    <svg class="card__icon" width="21" height="18">
+                                      <use xlink:href="img/sprite.svg#icon-arow"></use>
+                                    </svg>
+                                  </button>
+                                </div></a></article>
+                            <article class="card"><a class="card__link" href="#">
+                                <div class="card__image"><img class="card__pict" src="img/image-item5.jpg" width="468" height="264"></div>
+                                <div class="card__content">
+                                  <div class="card__desc">
+                                    <div class="card__tags"><span class="card__tag">Коммуналка</span><span class="card__date">02/02/2021</span></div>
+                                    <h3 class="card__title">В Златоусте сотрудники теротдела проверят магазин, из которого выбрасывали строительный мусор на контейнерную площадку</h3>
+                                  </div>
+                                  <button class="card__arow">
+                                    <svg class="card__icon" width="21" height="18">
+                                      <use xlink:href="img/sprite.svg#icon-arow"></use>
+                                    </svg>
+                                  </button>
+                                </div></a></article>
+                            <article class="card"><a class="card__link" href="#">
+                                <div class="card__image"><img class="card__pict" src="img/image-item6.jpg" width="468" height="264"></div>
+                                <div class="card__content">
+                                  <div class="card__desc">
+                                    <div class="card__tags"><span class="card__tag">Общество</span><span class="card__date">29/01/2021</span></div>
+                                    <h3 class="card__title">ДЧ: Первое Собрание депутатов 2021 года: планируется работа на весь год</h3>
+                                  </div>
+                                  <button class="card__arow">
+                                    <svg class="card__icon" width="21" height="18">
+                                      <use xlink:href="img/sprite.svg#icon-arow"></use>
+                                    </svg>
+                                  </button>
+                                </div></a></article>
+            </div>
+                          <article class="card card--main"><a class="card__link card__link--main" href="new.html">
+                              <div class="card__image card__image--main"><img class="card__pict" src="img/image-item2.jpg" width="468" height="264"></div>
+                              <div class="card__content card__content--main">
+                                <div class="card__desc">
+                                  <div class="card__tags"><span class="card__tag">Медицина</span><span class="card__date">29/01/2021</span></div>
+                                  <h3 class="card__title card__title--main">Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля</h3>
+                                  <p class="card__text">Ещё одна главная новость дня — с 8 февраля златоустовский роддом возвращается к привычному формату работы. Госпитальную базу для лечения больных коронавирусной инфекцией переводят...</p>
                                 </div>
-                              </article>
-                            </div></a>
-            <div class="news-card__slider slider">
-              <button class="slider__button-arrow"><img src="img/icons/icon-arow-slide-light.svg" width="14" height="12"></button>
-              <div class="slider__numbers">
-                <button class="slider__button-num"></button>
-                <button class="slider__button-num slider__button-num--current">1</button>
-                <button class="slider__button-num">2</button>
-                <button class="slider__button-num">3</button>
-                <p class="slider__button-num">...</p>
-                <button class="slider__button-num">123</button>
-              </div>
-              <button class="slider__button-arrow"><img src="img/icons/icon-arow-slide.svg" width="14" height="12"></button>
+                                <button class="card__arow card__arow--main">
+                                  <svg class="card__icon" width="21" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-arow"></use>
+                                  </svg>
+                                </button>
+                              </div></a></article>
+            <div class="news-card__pagination pagination"><a class="pagination__button-arrow" href="#" disabled>
+                <svg class="pagination__img-arrow pagination__img-arrow--left" width="14" height="12">
+                  <use xlink:href="img/sprite.svg#icon-arow-pagination"></use>
+                </svg></a>
+              <div class="pagination__numbers"><a class="pagination__button-num" href="#"></a><a class="pagination__button-num pagination__button-num--current" href="#">1</a><a class="pagination__button-num" href="#">2</a><a class="pagination__button-num" href="#">3</a><a class="pagination__button-num" href="#">...</a><a class="pagination__button-num" href="#">123</a></div><a class="pagination__button-arrow" href="#">
+                <svg class="pagination__img-arrow" width="14" height="12">
+                  <use xlink:href="img/sprite.svg#icon-arow-pagination"></use>
+                </svg></a>
             </div>
           </div>
         </section>
@@ -193,11 +215,26 @@
       <div class="footer__social social">
         <p class="footer__slogan">Подписывайтесь на нас:</p>
         <ul class="social__list social__list--footer">
-          <li class="social__item"><a href="#"><img src="img/icons/icon-yt.svg" alt="Ютуб" width="23" height="24"></a></li>
-          <li class="social__item"><a href="#"><img src="img/icons/icon-fc.svg" alt="Фэйсбук" width="24" height="24"></a></li>
-          <li class="social__item"><a href="#"><img src="img/icons/icon-vk.svg" alt="Вконтакте" width="27" height="28"></a></li>
-          <li class="social__item"><a href="#"><img src="img/icons/icon-ok.svg" alt="Одноклассники" width="25" height="24"></a></li>
-          <li class="social__item"><a href="#"><img src="img/icons/icon-insta.svg" alt="Инстаграмм" width="23" height="23"></a></li>
+          <li class="social__item"><a href="#">
+              <svg width="24" height="24">
+                <use xlink:href="img/sprite.svg#icon-yt-footer"></use>
+              </svg></a></li>
+          <li class="social__item"><a href="#">
+              <svg width="24" height="24">
+                <use xlink:href="img/sprite.svg#icon-fc-footer"></use>
+              </svg></a></li>
+          <li class="social__item"><a href="#">
+              <svg width="28" height="28">
+                <use xlink:href="img/sprite.svg#icon-vk-footer"></use>
+              </svg></a></li>
+          <li class="social__item"><a href="#">
+              <svg width="24" height="24">
+                <use xlink:href="img/sprite.svg#icon-ok-footer"></use>
+              </svg></a></li>
+          <li class="social__item"><a href="#">
+              <svg width="24" height="24">
+                <use xlink:href="img/sprite.svg#icon-insta-footer"></use>
+              </svg></a></li>
         </ul>
       </div>
       <div class="footer__bottom">
@@ -205,11 +242,14 @@
           <p class="license__text">© 2021 «Златоустовское телевидение»</p>
           <p class="license__text">Политика конфиденциальности</p>
         </div>
-        <div class="footer__logo"><a href="#"><img src="img/icons/icon-logo.svg" alt="Логотип" width="69" height="20">
-            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-            <script src="js/script.js"></script>
-            <script src="js/burger.js"></script>
-            <script src="js/select.js"></script></a></div>
+        <div class="footer__logo"><a href="#">
+            <svg width="70" height="20">
+              <use xlink:href="img/sprite.svg#icon-logo"></use>
+              <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+              <script src="js/script.js"></script>
+              <script src="js/burger.js"></script>
+              <script src="js/select.js"></script>
+            </svg></a></div>
       </div>
     </div>
   </footer>

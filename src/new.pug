@@ -39,7 +39,8 @@ html(lang="ru")
             .video-preview
               img(src='img/main-new.jpg' width='256' height='264' alt='Больница').video-preview__image
               button(aria-label='Воспроизвести видео').video-preview__play
-                img(src='img/icons/icon-button-video.svg' width='136' height='136' alt='Плэй видео')
+                svg(width='136' height='136')
+                  use(xlink:href="img/sprite.svg#icon-button-video")
             .page-new__quote
               strong Александр Дорофеев
               small главный врач родильного дома г. Златоуста:
@@ -60,15 +61,25 @@ html(lang="ru")
                 hr.hr
                 ul.social__list
                   li.social__item
-                    img(src='img/icons/icon-yt.svg', alt='Ютуб' width='15' height='16')
+                    a(href='#')
+                      svg(width='15' height='16')
+                        use(xlink:href="img/sprite.svg#icon-yt")
                   li.social__item
-                    img(src='img/icons/icon-fc.svg', alt='Фэйсбук' width='16' height='16')
+                    a(href='#')
+                      svg(width='16' height='16')
+                        use(xlink:href="img/sprite.svg#icon-fc")
                   li.social__item
-                    img(src='img/icons/icon-vk.svg', alt='Вконтакте' width='18' height='18')
+                    a(href='#')
+                      svg(width='18' height='18')
+                        use(xlink:href="img/sprite.svg#icon-vk")
                   li.social__item
-                    img(src='img/icons/icon-ok.svg', alt='Одноклассники' width='16' height='16')
+                    a(href='#')
+                      svg(width='16' height='16')
+                        use(xlink:href="img/sprite.svg#icon-ok")
                   li.social__item
-                    img(src='img/icons/icon-insta.svg', alt='Инстаграмм' width='15' height='15')
+                    a(href='#')
+                      svg(width='15' height='15')
+                        use(xlink:href="img/sprite.svg#icon-insta")
         section.feadback
           .feadback__wrapper
             h2.feadback__title Оставьте свой комментарий

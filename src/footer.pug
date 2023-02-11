@@ -3,25 +3,31 @@ footer.footer
     .footer__social.social
       p.footer__slogan Подписывайтесь на нас:
       ul.social__list.social__list--footer
-        li.social__item
-          a(href='#')
-            img(src='img/icons/icon-yt.svg', alt='Ютуб' width='23' height='24')
-        li.social__item
-          a(href='#')
-            img(src='img/icons/icon-fc.svg', alt='Фэйсбук' width='24' height='24')
-        li.social__item
-          a(href='#')
-            img(src='img/icons/icon-vk.svg', alt='Вконтакте' width='27' height='28')
-        li.social__item
-          a(href='#')
-            img(src='img/icons/icon-ok.svg', alt='Одноклассники' width='25' height='24')
-        li.social__item
-          a(href='#')
-            img(src='img/icons/icon-insta.svg', alt='Инстаграмм' width='23' height='23')
+          li.social__item
+            a(href='#')
+              svg(width='24' height='24')
+                use(xlink:href="img/sprite.svg#icon-yt-footer")
+          li.social__item
+            a(href='#')
+              svg(width='24' height='24')
+                use(xlink:href="img/sprite.svg#icon-fc-footer")
+          li.social__item
+            a(href='#')
+              svg(width='28' height='28')
+                use(xlink:href="img/sprite.svg#icon-vk-footer")
+          li.social__item
+            a(href='#')
+              svg(width='24' height='24')
+                use(xlink:href="img/sprite.svg#icon-ok-footer")
+          li.social__item
+            a(href='#')
+              svg(width='24' height='24')
+                use(xlink:href="img/sprite.svg#icon-insta-footer")
     .footer__bottom
       .footer__license.license
         p.license__text © 2021 «Златоустовское телевидение»
         p.license__text Политика конфиденциальности
       .footer__logo
         a(href='#')
-          img(src='img/icons/icon-logo.svg', alt='Логотип' width='69' height='20')
+          svg(width='70' height='20')
+            use(xlink:href="img/sprite.svg#icon-logo")

@@ -24,17 +24,3 @@
     gap: 50px;
   }
 }
-
-.news-cards__item {
-  @media (min-width: $tablet-width) {
-    width: 100%;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-top: 24px;
-  }
-
-  &--main {
-    background-color: #ffffff;
-  }
-}

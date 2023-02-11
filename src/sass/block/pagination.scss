@@ -1,4 +1,4 @@
-.slider {
+.pagination {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -9,7 +9,7 @@
   padding: 66px 0 70px;
 }
 
-.slider__button-num {
+.pagination__button-num {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -33,14 +33,21 @@
   }
 }
 
-.slider__button-arrow {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+.pagination__button-arrow:disabled {
+  background-color: $light-color
 }
 
-.slider__numbers {
+.pagination__numbers {
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+
+.pagination__img-arrow {
+  color: $main-color;
+
+  &--left {
+    transform: rotate(180deg);
+    color: $light-color;
+  }
 }

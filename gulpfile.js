@@ -2,8 +2,11 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import pug from 'gulp-pug';
+import rename from 'gulp-rename';
 import browser from 'browser-sync';
 import terser from 'gulp-terser';
+import svgo from 'gulp-svgo';
+import svgstore from 'gulp-svgstore';
 
 
  const gulpPug = () => {
@@ -37,6 +40,14 @@ const copyImages = () => {
   .pipe(gulp.dest('build/img'))
 }
 
+const sprite = () => {
+  return gulp.src('src/img/icons/*.svg')
+  .pipe(svgo())
+  .pipe(svgstore())
+  .pipe(rename('sprite.svg'))
+  .pipe(gulp.dest('src/img'));
+  }
+
 const scripts = () => {
   return gulp.src('src/js/*.js')
   .pipe(terser())
@@ -60,6 +71,7 @@ export const build = gulp.series(
   copyImages,
   gulp.parallel(
   scripts,
+  sprite,
   styles,
   gulpPug,
   ),
@@ -77,4 +89,5 @@ export default gulp.series(
   server,
   watcher,
   gulp.parallel(
+    sprite,
     scripts));

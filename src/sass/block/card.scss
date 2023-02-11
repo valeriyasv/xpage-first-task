@@ -1,14 +1,23 @@
 .card {
   // max-width: 468px;
   // background-color: greenyellow;
+  min-height: 440px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 24px;
+  }
 
   &--main {
     box-sizing: border-box;
     padding: 20px;
     margin-top: 90px;
+    background-color: #ffffff;
 
     @media (min-width: $desktop-width) {
       flex-direction: row;
@@ -98,6 +107,10 @@
   }
 }
 
+.card__icon {
+  display: block;
+}
+
 .card__image {
   position: relative;
 
@@ -121,18 +134,20 @@
 
 .card__link {
   cursor: pointer;
+  display: block;
   text-decoration: none;
   color: $main-color;
-  display: flex;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 
   &--main {
     display: block;
+
   }
 }
 
-.card__link-main {
-  cursor: pointer;
-  text-decoration: none;
-  color: $main-color;
-}

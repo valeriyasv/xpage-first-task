@@ -312,14 +312,25 @@ a {
 }
 
 .card {
+  min-height: 440px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .card {
+    margin-top: 24px;
+  }
 }
 .card--main {
   box-sizing: border-box;
   padding: 20px;
   margin-top: 90px;
+  background-color: #ffffff;
 }
 @media (min-width: 1200px) {
   .card--main {
@@ -409,6 +420,10 @@ a {
   }
 }
 
+.card__icon {
+  display: block;
+}
+
 .card__image {
   position: relative;
 }
@@ -430,19 +445,19 @@ a {
 
 .card__link {
   cursor: pointer;
+  display: block;
   text-decoration: none;
   color: #373334;
-  display: flex;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 .card__link--main {
   display: block;
-}
-
-.card__link-main {
-  cursor: pointer;
-  text-decoration: none;
-  color: #373334;
 }
 
 .news-cards {
@@ -475,21 +490,7 @@ a {
   }
 }
 
-@media (min-width: 768px) {
-  .news-cards__item {
-    width: 100%;
-  }
-}
-@media (min-width: 1200px) {
-  .news-cards__item {
-    margin-top: 24px;
-  }
-}
-.news-cards__item--main {
-  background-color: #ffffff;
-}
-
-.slider {
+.pagination {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -500,7 +501,7 @@ a {
   padding: 66px 0 70px;
 }
 
-.slider__button-num {
+.pagination__button-num {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -510,7 +511,7 @@ a {
   font-family: inherit;
   cursor: pointer;
 }
-.slider__button-num--current::after {
+.pagination__button-num--current::after {
   content: "";
   width: 16px;
   height: 2px;
@@ -521,16 +522,22 @@ a {
   margin-left: -4px;
 }
 
-.slider__button-arrow {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+.pagination__button-arrow:disabled {
+  background-color: #959595;
 }
 
-.slider__numbers {
+.pagination__numbers {
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+
+.pagination__img-arrow {
+  color: #373334;
+}
+.pagination__img-arrow--left {
+  transform: rotate(180deg);
+  color: #959595;
 }
 
 .footer {

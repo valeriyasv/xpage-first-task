@@ -46,7 +46,7 @@ html(lang="ru")
                   input(id="singleSelect4" class="select__input" type="radio" name="singleSelect")
                   label(for="singleSelect4" class="select__label") Вектор развития
           .news-cards
-            ul.news-cards__list
+            .news-cards__list
               include mixins.pug
               +cardTags('Медицина', 'Общество', '02/02/2021', 'Благодаря поддержке предпринимателей. Златоустовские поликлиники оснастили холодильными установками для хранения вакцины', 'img/image-item1.jpg')
               +card('Медицина', '29/01/2021', 'Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля', 'img/image-item2.jpg')
@@ -55,18 +55,20 @@ html(lang="ru")
               +card('Коммуналка', '02/02/2021', 'В Златоусте сотрудники теротдела проверят магазин, из которого выбрасывали строительный мусор на контейнерную площадку', 'img/image-item5.jpg')
               +card('Общество', '29/01/2021', 'ДЧ: Первое Собрание депутатов 2021 года: планируется работа на весь год', 'img/image-item6.jpg')
             +card-main('Медицина', '29/01/2021','Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля', 'Ещё одна главная новость дня — с 8 февраля златоустовский роддом возвращается к привычному формату работы. Госпитальную базу для лечения больных коронавирусной инфекцией переводят...', 'img/image-item2.jpg')
-            .news-card__slider.slider
-              button.slider__button-arrow
-                img(src='img/icons/icon-arow-slide-light.svg' width='14' height='12')
-              .slider__numbers
-                button.slider__button-num
-                button.slider__button-num.slider__button-num--current 1
-                button.slider__button-num 2
-                button.slider__button-num 3
-                p.slider__button-num ...
-                button.slider__button-num 123
-              button.slider__button-arrow
-                img(src='img/icons/icon-arow-slide.svg' width='14' height='12')
+            .news-card__pagination.pagination
+              a(href="#" disabled).pagination__button-arrow
+                svg(width='14' height='12').pagination__img-arrow.pagination__img-arrow--left
+                  use(xlink:href="img/sprite.svg#icon-arow-pagination")
+              .pagination__numbers
+                a(href="#").pagination__button-num
+                a(href="#").pagination__button-num.pagination__button-num--current 1
+                a(href="#").pagination__button-num 2
+                a(href="#").pagination__button-num 3
+                a(href="#").pagination__button-num ...
+                a(href="#").pagination__button-num 123
+              a(href="#").pagination__button-arrow
+                svg(width='14' height='12').pagination__img-arrow
+                  use(xlink:href="img/sprite.svg#icon-arow-pagination")
   include footer
     script(src="https://cdn.jsdelivr.net/npm/flatpickr")
     script(src='js/script.js')
