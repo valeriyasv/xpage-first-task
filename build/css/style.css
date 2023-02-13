@@ -1180,11 +1180,12 @@ input[type=file] {
 .breadcrumb {
   padding: 0;
   list-style: none;
+  display: flex;
 }
 
 .breadcrumb__item {
-  display: inline;
   font-size: 16px;
+  margin-left: 3px;
 }
 
 .breadcrumb li + li:before {
