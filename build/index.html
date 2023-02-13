@@ -14,6 +14,8 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   </head>
   <body>
     <header class="main-header">
@@ -22,43 +24,43 @@
           <div class="main-header__btns">
             <button class="btn main-header__button" aria-label="Предложить новость">Предложить новость</button>
             <div class="main-header__burger">
-              <button class="main-header__toggle"><img class="main-header__burger-img" src="img/icons/burger.png" alt="Меню" width="22" height="22"></button>
+              <button class="main-header__toggle" aria-label="Открыть меню"><img class="main-header__burger-img" src="img/icons/burger.png" alt="Меню" width="22" height="22"></button>
             </div>
           </div>
-          <div class="main-header__interact"><a class="main-header__contact" href="tel:+73513651711">8 (3513) 65-17-11</a><a href="#">
+          <div class="main-header__interact"><a class="main-header__contact" href="tel:+73513651711" aria-label="Позвонить по номеру: +73513651711">8 (3513) 65-17-11</a><a href="#" aria-label="Поиск">
               <svg width="18" height="18">
-                <use xlink:href="img/sprite.svg#icon-search"></use>
+                <use xlink:href="../img/sprite.svg#icon-search"></use>
               </svg></a></div>
         </div>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item"><a href="index.html">Новости</a></li>
-            <li class="site-list__item"><a href="#">Телепроекты</a></li>
-            <li class="site-list__item"><a href="#">Реклама</a></li>
-            <li class="site-list__item site-list__item--after"><a href="#">Онлайн</a></li>
-            <li class="site-list__item"><a href="#">Программа передач</a></li>
-            <li class="site-list__item site-list__item--after"><a href="#">Еще</a></li>
+            <li class="site-list__item"><a href="index.html" aria-label="Новости">Новости</a></li>
+            <li class="site-list__item"><a href="#" aria-label="Телепроекты">Телепроекты</a></li>
+            <li class="site-list__item"><a href="#" aria-label="Реклама">Реклама</a></li>
+            <li class="site-list__item site-list__item--after"><a href="#" aria-label="Онлайн">Онлайн</a></li>
+            <li class="site-list__item"><a href="#" aria-label="Программа передач">Программа передач</a></li>
+            <li class="site-list__item site-list__item--after"><a href="#" aria-label="Еще">Еще</a></li>
           </ul>
           <div class="main-nav__social social">
             <p class="social__slogan">Подписывайтесь на нас:</p>
             <ul class="social__list">
-              <li class="social__item"><a href="#">
+              <li class="social__item"><a href="#" aria-label="Ютуб канал">
                   <svg width="15" height="16">
                     <use xlink:href="img/sprite.svg#icon-yt"></use>
                   </svg></a></li>
-              <li class="social__item"><a href="#">
+              <li class="social__item"><a href="#" aria-label="Фэйсбук">
                   <svg width="16" height="16">
                     <use xlink:href="img/sprite.svg#icon-fc"></use>
                   </svg></a></li>
-              <li class="social__item"><a href="#">
+              <li class="social__item"><a href="#" aria-label="Аккаунт в контакте">
                   <svg width="18" height="18">
                     <use xlink:href="img/sprite.svg#icon-vk"></use>
                   </svg></a></li>
-              <li class="social__item"><a href="#">
+              <li class="social__item"><a href="#" aria-label="Аккаунт в одноклассниках">
                   <svg width="16" height="16">
                     <use xlink:href="img/sprite.svg#icon-ok"></use>
                   </svg></a></li>
-              <li class="social__item"><a href="#">
+              <li class="social__item"><a href="#" aria-label="Инстаграм">
                   <svg width="15" height="15">
                     <use xlink:href="img/sprite.svg#icon-insta"></use>
                   </svg></a></li>
@@ -80,9 +82,7 @@
             </nav>
           </div>
           <div class="main-page__sorting">
-            <div class="date"><img class="img-date" src="../img/icons/icon-calendar.svg">
-              <input class="calendar" type="date" placeholder="02/02/2021">
-            </div>
+            <input class="calendar" type="date" placeholder="02/02/2021">
             <form>
               <div class="select" data-state="">
                 <div class="select__title" data-default="Choose">Выбрать рубрику</div>
@@ -105,7 +105,7 @@
           </div>
           <div class="news-cards">
             <div class="news-cards__list">
-                            <article class="card"><a class="card__link" href="#"></a>
+                            <article class="card"><a class="card__link" href="#" aria-label="Открыть новость"></a>
                               <div class="card__image"><img class="card__pict" src="img/image-item1.jpg" width="468" height="264"></div>
                               <div class="card__content">
                                 <div class="card__desc">
@@ -119,7 +119,7 @@
                                 </svg>
                               </button>
                             </article>
-                            <article class="card"><a class="card__link" href="#"></a>
+                            <article class="card"><a class="card__link" href="#" aria-label="Открыть новость"></a>
                               <div class="card__image"><img class="card__pict" src="img/image-item2.jpg" width="468" height="264"></div>
                               <div class="card__content">
                                 <div class="card__desc">
@@ -133,7 +133,7 @@
                                 </button>
                               </div>
                             </article>
-                            <article class="card"><a class="card__link" href="#"></a>
+                            <article class="card"><a class="card__link" href="#" aria-label="Открыть новость"></a>
                               <div class="card__image"><img class="card__pict" src="img/image-item3.jpg" width="468" height="264"></div>
                               <div class="card__content">
                                 <div class="card__desc">
@@ -147,7 +147,7 @@
                                 </button>
                               </div>
                             </article>
-                            <article class="card"><a class="card__link" href="#"></a>
+                            <article class="card"><a class="card__link" href="#" aria-label="Открыть новость"></a>
                               <div class="card__image"><img class="card__pict" src="img/image-item4.jpg" width="468" height="264"></div>
                               <div class="card__content">
                                 <div class="card__desc">
@@ -161,7 +161,7 @@
                                 </button>
                               </div>
                             </article>
-                            <article class="card"><a class="card__link" href="#"></a>
+                            <article class="card"><a class="card__link" href="#" aria-label="Открыть новость"></a>
                               <div class="card__image"><img class="card__pict" src="img/image-item5.jpg" width="468" height="264"></div>
                               <div class="card__content">
                                 <div class="card__desc">
@@ -175,7 +175,7 @@
                                 </button>
                               </div>
                             </article>
-                            <article class="card"><a class="card__link" href="#"></a>
+                            <article class="card"><a class="card__link" href="#" aria-label="Открыть новость"></a>
                               <div class="card__image"><img class="card__pict" src="img/image-item6.jpg" width="468" height="264"></div>
                               <div class="card__content">
                                 <div class="card__desc">
@@ -190,7 +190,7 @@
                               </div>
                             </article>
             </div>
-                          <article class="card card--main"><a class="card__link card__link--main" href="new.html"></a>
+                          <article class="card card--main"><a class="card__link card__link--main" href="new.html" aria-label="Открыть новость"></a>
                             <div class="card__image card__image--main"><img class="card__pict" src="img/image-item2.jpg" width="468" height="264"></div>
                             <div class="card__content card__content--main">
                               <div class="card__desc">
@@ -223,23 +223,23 @@
         <div class="footer__social social">
           <p class="footer__slogan">Подписывайтесь на нас:</p>
           <ul class="social__list social__list--footer">
-            <li class="social__item"><a href="#">
+            <li class="social__item"><a href="#" aria-label="Ютуб канал">
                 <svg width="24" height="24">
                   <use xlink:href="img/sprite.svg#icon-yt-footer"></use>
                 </svg></a></li>
-            <li class="social__item"><a href="#">
+            <li class="social__item"><a href="#" aria-label="Фэйсбук">
                 <svg width="24" height="24">
                   <use xlink:href="img/sprite.svg#icon-fc-footer"></use>
                 </svg></a></li>
-            <li class="social__item"><a href="#">
+            <li class="social__item"><a href="#" aria-label="Аккаунт в контакте">
                 <svg width="28" height="28">
                   <use xlink:href="img/sprite.svg#icon-vk-footer"></use>
                 </svg></a></li>
-            <li class="social__item"><a href="#">
+            <li class="social__item"><a href="#" aria-label="Аккаунт в одноклассниках">
                 <svg width="24" height="24">
                   <use xlink:href="img/sprite.svg#icon-ok-footer"></use>
                 </svg></a></li>
-            <li class="social__item"><a href="#">
+            <li class="social__item"><a href="#" aria-label="Инстаграм">
                 <svg width="24" height="24">
                   <use xlink:href="img/sprite.svg#icon-insta-footer"></use>
                 </svg></a></li>
@@ -247,9 +247,9 @@
         </div>
         <div class="footer__bottom">
           <div class="footer__license license">
-            <p class="license__text">© 2021 «Златоустовское телевидение»</p><a class="license__link" href="#">Политика конфиденциальности</a>
+            <p class="license__text">© 2021 «Златоустовское телевидение»</p><a class="license__link" href="#" aria-label="Политика конфиденциальности">Политика конфиденциальности</a>
           </div>
-          <div class="footer__logo"><a href="#">
+          <div class="footer__logo"><a href="#" aria-label="Логотип">
               <svg width="70" height="20">
                 <use xlink:href="img/sprite.svg#icon-logo"></use>
               </svg></a></div>
@@ -257,7 +257,6 @@
       </div>
     </footer>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="js/script.js"></script>
   <script src="js/burger.js"></script>
   <script src="js/select.js"></script>

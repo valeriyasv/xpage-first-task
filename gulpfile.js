@@ -7,14 +7,21 @@ import svgo from 'gulp-svgo';
 import plumber from 'gulp-plumber';
 import browser from 'browser-sync';
 import terser from 'gulp-terser';
+import connect from "gulp-connect";
 
+gulp.task("connect", function() {
+  connect.server({
+    root: "app",
+    livereload: true
+  });
+});
 
- const gulpPug = () => {
-  return gulp.src('src/*.pug')
-    .pipe(pug({
-      pretty:true
-    }))
-    .pipe(gulp.dest('build'));
+const gulpPug = () => {
+return gulp.src(['src/*.pug', '!src/_*.pug'])
+  .pipe(pug({
+    pretty:true
+  }))
+  .pipe(gulp.dest('build'));
 }
 
 const styles = () => {
@@ -54,6 +61,7 @@ const scripts = () => {
   .pipe(gulp.dest('build/js'));
 }
 
+
 const server = (done) => {
   return browser.init({
   server: {
@@ -67,6 +75,7 @@ const server = (done) => {
 }
 
 export const build = gulp.series(
+  // clean,
   copy,
   copyImages,
   gulp.parallel(
@@ -79,15 +88,18 @@ export const build = gulp.series(
 
 const watcher = () => {
   gulp.watch('src/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('src/js/script.js', gulp.series(scripts));
+  gulp.watch('src/js/*.js', gulp.series(scripts));
   gulp.watch('src/*.pug', gulp.series(gulpPug));
 }
 
 export default gulp.series(
+  // clean,
   copy,
   copyImages,
-  server,
-  watcher,
   gulp.parallel(
+    styles,
     scripts,
-    sprite));
+    sprite),
+    gulp.series(
+      server,
+      watcher));

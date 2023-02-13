@@ -1,4 +1,8 @@
 .site-list__item {
+  &:not(:last-child) {
+    margin: 0 0 20px;
+  }
+
   &--after {
     position: relative;
 
@@ -15,7 +19,7 @@
 
   @media (min-width: $desktop-width) {
     &:not(:last-child) {
-      margin-right: 48px;
+      margin: 0 48px 0 0;
     }
   }
 }

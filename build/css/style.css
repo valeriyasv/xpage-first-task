@@ -22,23 +22,12 @@
 }
 .wrapper {
   padding: 0 20px;
+  max-width: 1360px;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .wrapper {
-    max-width: 648px;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 1200px) {
-  .wrapper {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 1600px) {
-  .wrapper {
-    max-width: 1500px;
-    margin: 0 auto;
+    padding: 0 40px;
   }
 }
 
@@ -176,13 +165,11 @@ a {
   .main-nav {
     justify-content: space-between;
     flex-direction: column;
-    gap: 25px;
   }
 }
 @media (min-width: 1200px) {
   .main-nav {
     flex-direction: column;
-    gap: 30px;
     margin: 39px 0 0;
   }
 }
@@ -218,6 +205,11 @@ a {
     flex-direction: row;
   }
 }
+@media (min-width: 1200px) {
+  .main-nav__social {
+    margin-top: 30px;
+  }
+}
 @media (min-width: 1700px) {
   .main-nav__social {
     margin: 0;
@@ -225,12 +217,10 @@ a {
 }
 
 .main-nav--opened .main-nav__list {
-  width: 100%;
   flex-direction: column;
   display: flex;
   position: absolute;
   background-color: #ffffff;
-  gap: 20px;
   padding: 50px 40px;
   margin: 0;
   left: 0;
@@ -332,7 +322,6 @@ a {
 .main-page__sorting {
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
 @media (min-width: 1200px) {
   .main-page__sorting {
@@ -341,7 +330,6 @@ a {
 }
 
 .card {
-  height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -351,13 +339,12 @@ a {
 }
 @media (min-width: 768px) {
   .card {
-    width: 100%;
-    margin-right: 50px;
+    margin: 0 30px 30px 0;
   }
 }
 @media (min-width: 1200px) {
   .card {
-    margin-top: 24px;
+    margin: 24px 50px 50px 0;
   }
 }
 .card--main {
@@ -380,6 +367,7 @@ a {
 .card__tag {
   color: #9f0023;
   font-size: 14px;
+  margin-right: 40px;
 }
 @media (min-width: 768px) {
   .card__tag {
@@ -396,7 +384,6 @@ a {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: 40px;
 }
 
 .card__content {
@@ -423,7 +410,7 @@ a {
 .card__pict {
   display: block;
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .card__title {
@@ -445,6 +432,7 @@ a {
   margin-top: auto;
   border: none;
   background-color: transparent;
+  padding: 0;
 }
 @media (min-width: 1600px) {
   .card__arow--main {
@@ -517,11 +505,6 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 1700px) {
-  .news-cards__list {
-    gap: 50px;
-  }
-}
 
 .pagination {
   display: flex;
@@ -551,7 +534,7 @@ a {
   position: absolute;
   bottom: 0;
   left: 0;
-  margin-left: -4px;
+  margin-left: -2px;
 }
 .pagination__button-num:not(:last-child) {
   margin-right: 20px;
@@ -582,6 +565,7 @@ a {
 
 .footer__slogan {
   font-size: 20px;
+  margin: 0 0 18px 0;
 }
 @media (min-width: 768px) {
   .footer__slogan {
@@ -595,7 +579,12 @@ a {
 
 .footer__license {
   font-size: 14px;
-  margin: 47px 0 50px;
+  margin: 47px 0;
+}
+@media (min-width: 768px) {
+  .footer__license {
+    margin: 47px 0 0;
+  }
 }
 
 .footer__bottom {
@@ -881,6 +870,12 @@ a {
   border-bottom: 2px solid #ffffff;
   color: #ffffff;
   font-size: 16px;
+  margin: 0 0 40px;
+}
+@media (min-width: 1200px) {
+  .feadback__input {
+    margin: 0 40px 0 0;
+  }
 }
 .feadback__input::placeholder {
   font-size: 16px;
@@ -906,6 +901,7 @@ a {
   color: #ffffff;
   font-size: 16px;
   font-family: inherit;
+  margin: 48px 0 82px;
 }
 .feadback__textarea::placeholder {
   font-size: 16px;
@@ -917,13 +913,11 @@ a {
   color: #ffffff;
   border: 2px solid #ffffff;
   max-width: 162px;
-  margin-top: 34px;
 }
 
 .feadback__details {
   display: flex;
   flex-direction: column;
-  gap: 40px;
 }
 @media (min-width: 1200px) {
   .feadback__details {
@@ -934,7 +928,6 @@ a {
 .feadback__wrap {
   display: flex;
   flex-direction: column;
-  gap: 48px;
   margin-top: 54px;
 }
 
@@ -973,6 +966,9 @@ input[type=file] {
   cursor: pointer;
 }
 
+.site-list__item:not(:last-child) {
+  margin: 0 0 20px;
+}
 .site-list__item--after {
   position: relative;
 }
@@ -985,15 +981,14 @@ input[type=file] {
 }
 @media (min-width: 1200px) {
   .site-list__item:not(:last-child) {
-    margin-right: 48px;
+    margin: 0 48px 0 0;
   }
 }
 
 .select {
   flex-shrink: 0;
   position: relative;
-  width: 100%;
-  max-width: 468px;
+  width: 280px;
   height: 40px;
   font-family: "Frank", sans-serif;
   font-size: 16px;
@@ -1087,28 +1082,92 @@ input[type=file] {
   color: #9f0023;
 }
 
+.flatpickr-calendar {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.flatpickr-calendar.open {
+  display: block;
+}
+
+.flatpickr-calendar.inline {
+  display: inline-block;
+}
+
+.flatpickr-calendar.static {
+  position: absolute;
+  display: block;
+}
+
+.flatpickr-calendar.wide {
+  width: 308px;
+}
+
+/* styles for the calendar header */
+.flatpickr-calendar .flatpickr-months {
+  background: #fff;
+  color: #757575;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.flatpickr-calendar .flatpickr-prev-month,
+.flatpickr-calendar .flatpickr-next-month {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.flatpickr-calendar .flatpickr-prev-month.flatpickr-prev-month,
+.flatpickr-calendar .flatpickr-next-month.flatpickr-next-month {
+  padding: 0;
+}
+
+/* styles for the calendar body */
+.flatpickr-calendar .flatpickr-days {
+  background: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
 .calendar {
-  max-width: 466px;
-  width: 100%;
+  width: 280px;
+  height: 60px;
   border: 2px solid #373334;
   background-color: transparent;
-  height: 56px;
-  padding-left: 60px;
+  padding: 20px 60px;
+  box-sizing: border-box;
   outline: none;
+  background-image: url("../img/icons/icon-calendar.svg");
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .calendar {
+    width: 468px;
+  }
+}
+@media (min-width: 1200px) {
+  .calendar {
+    margin: 0 50px 0 0;
+  }
 }
 .calendar::placeholder {
   font-family: inherit;
   font-size: 16px;
   color: inherit;
-}
-
-.date {
-  position: relative;
-}
-.date .img-date {
-  position: absolute;
-  left: 20px;
-  top: 20px;
 }
 
 .breadcrumb {

@@ -32,6 +32,11 @@
   border-bottom: 2px solid $white-text;
   color: $white-text;
   font-size: 16px;
+  margin: 0 0 40px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 40px 0 0;
+  }
 
   &::placeholder {
     font-size: 16px;
@@ -47,16 +52,6 @@
   flex-shrink: 0;
 }
 
-// .feadback__photo {
-//   display: flex;
-//   flex-direction: row;
-//   gap: 10px;
-
-//   @media (min-width: $desktop-width) {
-//     margin-left: 12px;
-//   }
-// }
-
 .feadback__textarea {
   border: none;
   outline: none;
@@ -68,6 +63,7 @@
   color: $white-text;
   font-size: 16px;
   font-family: inherit;
+  margin: 48px 0 82px;
 
   &::placeholder {
     font-size: 16px;
@@ -80,13 +76,11 @@
   color: $white-text;
   border: 2px solid $white-text;
   max-width: 162px;
-  margin-top: 34px;
 }
 
 .feadback__details {
   display: flex;
   flex-direction: column;
-  gap: 40px;
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
@@ -96,7 +90,6 @@
 .feadback__wrap {
   display: flex;
   flex-direction: column;
-  gap: 48px;
   margin-top: 54px;
 }
 

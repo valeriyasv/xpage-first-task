@@ -5,7 +5,7 @@
 
 .footer__slogan {
   font-size: 20px;
-
+  margin: 0 0 18px 0;
   @media (min-width: $tablet-width) {
     font-size: 24px;
   }
@@ -17,7 +17,11 @@
 
 .footer__license {
   font-size: 14px;
-  margin: 47px 0 50px
+  margin: 47px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 47px 0 0;
+  }
 }
 
 .footer__bottom {

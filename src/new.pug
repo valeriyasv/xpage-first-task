@@ -15,7 +15,7 @@ html(lang="ru")
     link(rel="apple-touch-icon" href="img/favicons/apple.png")
     link(rel="manifest" href="manifest.webmanifest")
   body.page-new
-    include header.pug
+    include _header.pug
     main
       .wrapper
         section.main-page
@@ -23,11 +23,11 @@ html(lang="ru")
           nav
             ul.main-page__tag.breadcrumb
               li.breadcrumb__item
-                a(href='#').breadcrumb__link Главная
+                a(href='#' aria-label='Главная').breadcrumb__link Главная
               li.breadcrumb__item
-                a(href='#').breadcrumb__link Новости
+                a(href='#' aria-label='Новости').breadcrumb__link Новости
               li.breadcrumb__item
-                a(href='#').breadcrumb__link Медицина
+                a(href='#' aria-label='Медицина').breadcrumb__link Медицина
           .container
             .card__tags
               span.card__tag Медицина
@@ -60,23 +60,23 @@ html(lang="ru")
                 hr.hr
                 ul.social__list
                   li.social__item
-                    a(href='#')
+                    a(href='#' aria-label='Ютуб канал')
                       svg(width='15' height='16')
                         use(xlink:href="img/sprite.svg#icon-yt")
                   li.social__item
-                    a(href='#')
+                    a(href='#' aria-label='Фэйсбук')
                       svg(width='16' height='16')
                         use(xlink:href="img/sprite.svg#icon-fc")
                   li.social__item
-                    a(href='#')
+                    a(href='#' aria-label='Аккаунт в контакте')
                       svg(width='18' height='18')
                         use(xlink:href="img/sprite.svg#icon-vk")
                   li.social__item
-                    a(href='#')
+                    a(href='#' aria-label='Аккаунт в одноклассниках')
                       svg(width='16' height='16')
                         use(xlink:href="img/sprite.svg#icon-ok")
                   li.social__item
-                    a(href='#')
+                    a(href='#' aria-label='Инстаграм')
                       svg(width='15' height='15')
                         use(xlink:href="img/sprite.svg#icon-insta")
       section.feadback
@@ -85,14 +85,14 @@ html(lang="ru")
           form(action="")
             .feadback__wrap
               .feadback__details
-                input(type='text' placeholder='Имя').feadback__input
-                input(type='text' placeholder='E-mail').feadback__input
+                input(type='text' placeholder='Имя' aria-label='Введите имя').feadback__input
+                input(type='text' placeholder='E-mail' aria-label='Введите электронную почту').feadback__input
                 .feadback__photo
                   label(for="photo").feadback__label
                     | Прикрепить фото
-                  input(type="file" value="" id="photo").feadback__txt
+                  input(type="file" value="" id="photo" aria-label='Прикрепить фото').feadback__txt
               textarea(placeholder='Комментарий').feadback__textarea
-              button.btn.feadback__button Отправить
-    include footer
+              button(aria-label='Отправить').btn.feadback__button Отправить
+    include _footer.pug
     script(src='js/script.js')
     script(src='js/burger.js')

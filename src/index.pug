@@ -14,8 +14,10 @@ html(lang="ru")
     link(rel="icon" href="img/favicons/icon.svg" type="image/svg+xml")
     link(rel="apple-touch-icon" href="img/favicons/apple.png")
     link(rel="manifest" href="manifest.webmanifest")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
+    script(src="https://cdn.jsdelivr.net/npm/flatpickr")
   body
-    include header.pug
+    include _header.pug
     main
       .wrapper
         section.main-page
@@ -28,9 +30,7 @@ html(lang="ru")
                 li.breadcrumb__item
                   a(href='#').breadcrumb__link Новости
           .main-page__sorting
-            .date
-              img(src='../img/icons/icon-calendar.svg').img-date
-              input(type="date" class='calendar' placeholder='02/02/2021')
+            input(type="date" class='calendar' placeholder='02/02/2021')
             form
               .select(data-state="")
                 .select__title(data-default="Choose") Выбрать рубрику
@@ -49,7 +49,7 @@ html(lang="ru")
                   label(for="singleSelect4" class="select__label") Вектор развития
           .news-cards
             .news-cards__list
-              include mixins.pug
+              include _mixins.pug
               +cardTags('Медицина', 'Общество', '02/02/2021', 'Благодаря поддержке предпринимателей. Златоустовские поликлиники оснастили холодильными установками для хранения вакцины', 'img/image-item1.jpg')
               +card('Медицина', '29/01/2021', 'Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля', 'img/image-item2.jpg')
               +card('Коммуналка', '29/01/2021', 'Осторожно, сосульки! Оттепель на этой неделе привела к тому, что на крышах многих домов образовались опасные ледяные наросты', 'img/image-item3.jpg')
@@ -71,8 +71,8 @@ html(lang="ru")
               a(href="#").pagination__button-arrow
                 svg(width='14' height='12').pagination__img-arrow
                   use(xlink:href="img/sprite.svg#icon-arow-pagination")
-    include footer
-  script(src="https://cdn.jsdelivr.net/npm/flatpickr")
+
+    include _footer.pug
   script(src='js/script.js')
   script(src='js/burger.js')
   script(src='js/select.js')

@@ -1,6 +1,6 @@
 mixin card(tag, date, title, src)
   article.card
-    a(href='#').card__link
+    a(href='#' aria-label='Открыть новость').card__link
     .card__image
       img(src= src width='468' height='264').card__pict
     .card__content
@@ -15,7 +15,7 @@ mixin card(tag, date, title, src)
 
 mixin cardTags(tag, tagTwo, date, title, src)
   article.card
-    a(href='#').card__link
+    a(href='#' aria-label='Открыть новость').card__link
     .card__image
       img(src= src width='468' height='264').card__pict
     .card__content
@@ -31,7 +31,7 @@ mixin cardTags(tag, tagTwo, date, title, src)
 
 mixin card-main(tag, date, title, text, image)
   article.card.card--main
-    a(href='new.html').card__link.card__link--main
+    a(href='new.html' aria-label='Открыть новость').card__link.card__link--main
     .card__image.card__image--main
       img(src= image width='468' height='264').card__pict
     .card__content.card__content--main
