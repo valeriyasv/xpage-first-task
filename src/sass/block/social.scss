@@ -19,4 +19,12 @@
   &:not(:last-child) {
     margin-right: 16px;
   }
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  &:active {
+    color: $light-color;
+  }
 }

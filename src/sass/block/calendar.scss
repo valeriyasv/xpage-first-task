@@ -12,6 +12,53 @@
   background-repeat: no-repeat;
   background-position: 20px center;
   margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 24px;
+    display: block;
+    width: 10px;
+    height: 2px;
+    transition: all 0.3s ease-out;
+    background-color: $main-color;
+    transform: translate(-3px, -50%) rotate(45deg);
+    z-index: 2;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 24px;
+    display: block;
+    width: 10px;
+    height: 2px;
+    transition: all 0.3s ease-out;
+    background-color: $main-color;
+    transform: translate(-3px, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(3px, -50%) rotate(-45deg);
+  }
+
+  &:hover {
+
+    &::before,
+    &::after {
+      background-color: $accent-color;
+    }
+  }
+
+  &:hover {
+    border-color: $accent-color;
+    color: $accent-color;
+    background-image: url('../img/icons/icon-calendar-color.svg');
+  }
 
   @media (min-width: $tablet-width) {
     width: 468px;
@@ -25,6 +72,34 @@
     font-family: inherit;
     font-size: 16px;
     color: inherit;
+  }
+}
+
+.flatpickr-input {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 24px;
+    display: block;
+    width: 10px;
+    height: 2px;
+    transition: all 0.3s ease-out;
+    background-color: $main-color;
+    transform: translate(-3px, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(3px, -50%) rotate(-45deg);
+  }
+
+  &:hover {
+
+    &::before,
+    &::after {
+      background-color: $accent-color;
+    }
   }
 }
 

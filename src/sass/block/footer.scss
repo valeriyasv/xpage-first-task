@@ -34,3 +34,13 @@
     align-items: flex-end;
   }
 }
+
+.footer__logo {
+  &:hover {
+    color: $accent-color;
+  }
+
+  &:active {
+    color: $light-color;
+  }
+}

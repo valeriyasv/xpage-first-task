@@ -19,15 +19,16 @@ html(lang="ru")
     main
       .wrapper
         section.main-page
-          h1.page-new__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля
-          nav
-            ul.main-page__tag.breadcrumb
-              li.breadcrumb__item
-                a(href='#' aria-label='Главная').breadcrumb__link Главная
-              li.breadcrumb__item
-                a(href='#' aria-label='Новости').breadcrumb__link Новости
-              li.breadcrumb__item
-                a(href='#' aria-label='Медицина').breadcrumb__link Медицина
+          .main-page__txt
+            h1.page-new__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля
+            nav
+              ul.main-page__tag.breadcrumb
+                li.breadcrumb__item
+                  a(href='#' aria-label='Главная').breadcrumb__link Главная
+                li.breadcrumb__item
+                  a(href='#' aria-label='Новости').breadcrumb__link Новости
+                li.breadcrumb__item
+                  a(href='#' aria-label='Медицина').breadcrumb__link Медицина
           .container
             .card__tags
               span.card__tag Медицина
@@ -80,7 +81,7 @@ html(lang="ru")
                       svg(width='15' height='15')
                         use(xlink:href="img/sprite.svg#icon-insta")
       section.feadback
-        .feadback__wrapper
+        .wrapper
           h2.feadback__title Оставьте свой комментарий
           form(action="")
             .feadback__wrap
