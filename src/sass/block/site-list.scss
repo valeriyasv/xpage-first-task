@@ -12,4 +12,10 @@
       margin-left: 8px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &:not(:last-child) {
+      margin-right: 48px;
+    }
+  }
 }

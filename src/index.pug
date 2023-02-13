@@ -16,7 +16,7 @@ html(lang="ru")
     link(rel="manifest" href="manifest.webmanifest")
   body
     include header.pug
-    main.main-container
+    main
       .wrapper
         section.main-page
           .main-page__txt
@@ -28,7 +28,9 @@ html(lang="ru")
                 li.breadcrumb__item
                   a(href='#').breadcrumb__link Новости
           .main-page__sorting
-            input(type="date" class='calendar' placeholder='02/02/2021')
+            .date
+              img(src='../img/icons/icon-calendar.svg').img-date
+              input(type="date" class='calendar' placeholder='02/02/2021')
             form
               .select(data-state="")
                 .select__title(data-default="Choose") Выбрать рубрику
@@ -69,8 +71,8 @@ html(lang="ru")
               a(href="#").pagination__button-arrow
                 svg(width='14' height='12').pagination__img-arrow
                   use(xlink:href="img/sprite.svg#icon-arow-pagination")
-  include footer
-    script(src="https://cdn.jsdelivr.net/npm/flatpickr")
-    script(src='js/script.js')
-    script(src='js/burger.js')
-    script(src='js/select.js')
+    include footer
+  script(src="https://cdn.jsdelivr.net/npm/flatpickr")
+  script(src='js/script.js')
+  script(src='js/burger.js')
+  script(src='js/select.js')

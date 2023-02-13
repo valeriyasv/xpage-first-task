@@ -1,6 +1,6 @@
 .news-cards {
   padding: 0;
-  margin: 0;
+  margin: 55px 0 0;
 }
 
 .news-cards__list {
@@ -8,7 +8,6 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 30px;
 
   @media (min-width: $tablet-width) {
     display: grid;

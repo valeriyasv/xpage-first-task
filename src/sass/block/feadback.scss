@@ -1,10 +1,10 @@
 .feadback {
   padding: 90px 0 108px;
-  background-color: #373334;
+  background-color: $main-color;
 }
 
 .feadback__title {
-  color: #ffffff;
+  color: $white-text;
   font-size: 24px;
   margin: 0;
 
@@ -29,56 +29,56 @@
   padding-bottom: 12px;
   width: 100%;
   max-width: 338px;
-  border-bottom: 2px solid #ffffff;
-  color: #ffffff;
+  border-bottom: 2px solid $white-text;
+  color: $white-text;
   font-size: 16px;
 
   &::placeholder {
     font-size: 16px;
     font-weight: 300;
-    color: #ffffff;
+    color: $white-text;
   }
 }
 
 .feadback__txt {
   font-size: 14px;
-  color: #ffffff;
+  color: $white-text;
   margin: 0;
   flex-shrink: 0;
 }
 
-.feadback__photo {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+// .feadback__photo {
+//   display: flex;
+//   flex-direction: row;
+//   gap: 10px;
 
-  @media (min-width: $desktop-width) {
-    margin-left: 12px;
-  }
-}
+//   @media (min-width: $desktop-width) {
+//     margin-left: 12px;
+//   }
+// }
 
 .feadback__textarea {
   border: none;
   outline: none;
   background-color: transparent;
-  padding-bottom: 12px;
   width: 100%;
   max-width: 985px;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid $white-text;
   resize: none;
-  color: #ffffff;
+  color: $white-text;
   font-size: 16px;
+  font-family: inherit;
 
   &::placeholder {
     font-size: 16px;
     font-weight: 300;
-    color: #ffffff;
+    color: $white-text;
   }
 }
 
 .feadback__button {
-  color: #ffffff;
-  border: 2px solid #ffffff;
+  color: $white-text;
+  border: 2px solid $white-text;
   max-width: 162px;
   margin-top: 34px;
 }
@@ -98,4 +98,31 @@
   flex-direction: column;
   gap: 48px;
   margin-top: 54px;
+}
+
+input[type=file] {
+  display: none;
+}
+
+.feadback__label {
+  color: $white-text;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    background-image: url('../img/icons/icon-clip.svg');
+    background-repeat: no-repeat;
+    z-index: 3;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  span {
+    color: $white-text;
+  }
 }

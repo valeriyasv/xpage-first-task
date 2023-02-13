@@ -1,5 +1,74 @@
 .page-new {
-  padding-top: 52px;
+  h1:not([class]) {
+    font-size: 30px;
+    line-height: 125%;
+
+    @media (min-width: $tablet-width) {
+      font-size: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 52px;
+    }
+  }
+
+  h2:not([class]) {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 135%;
+    margin: 0;
+  }
+
+  p:not([class]) {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 162%;
+    margin: 0;
+  }
+
+  figcaption:not([class]) {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 135%;
+    color: $light-color;
+  }
+
+  .main-page {
+    gap: 0;
+  }
+
+  blockquote:not([class]) {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 162%;
+    margin: 26px 0 50px;
+    padding-bottom: 48px;
+    border-bottom: $border-bottom;
+  }
+
+  .main-page__tag {
+    margin-top: 16px;
+    margin-bottom: 40px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 75px;
+    }
+  }
+
+  .card__tags {
+    border-bottom: $border-bottom;
+    padding-bottom: 13px;
+    margin-bottom: 43px;
+  }
+
+  figure:not([class]) {
+    margin: 48px 0 0;
+  }
 }
 
 .page-new__title {

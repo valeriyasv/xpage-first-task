@@ -1,4 +1,18 @@
 .wrapper {
-  max-width: 80%;
-  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 648px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1600px) {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
 }

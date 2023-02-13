@@ -1,12 +1,12 @@
 import gulp from 'gulp';
-import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import pug from 'gulp-pug';
 import rename from 'gulp-rename';
+import svgstore from 'gulp-svgstore';
+import svgo from 'gulp-svgo';
+import plumber from 'gulp-plumber';
 import browser from 'browser-sync';
 import terser from 'gulp-terser';
-import svgo from 'gulp-svgo';
-import svgstore from 'gulp-svgstore';
 
 
  const gulpPug = () => {
@@ -70,8 +70,8 @@ export const build = gulp.series(
   copy,
   copyImages,
   gulp.parallel(
-  scripts,
   sprite,
+  scripts,
   styles,
   gulpPug,
   ),
@@ -89,5 +89,5 @@ export default gulp.series(
   server,
   watcher,
   gulp.parallel(
-    sprite,
-    scripts));
+    scripts,
+    sprite));

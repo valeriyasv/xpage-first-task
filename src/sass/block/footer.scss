@@ -17,13 +17,12 @@
 
 .footer__license {
   font-size: 14px;
-  margin-top: 47px;
+  margin: 47px 0 50px
 }
 
 .footer__bottom {
   display: flex;
   flex-direction: column;
-  gap: 50px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
