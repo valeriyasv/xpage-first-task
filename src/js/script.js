@@ -1,9 +1,8 @@
-flatpickr('.calendar', {})
+config = {
+  dateFormat: "M-d",
+  numInput : false,
+  locale: 'russian',
+}
 
-// config = {
-//   enableTime: true,
-//     dateFormat: "Y-m-d H:i",
-//     "locale": Russian,
-// }
-
-// flatpickr('.calendar', config);
+flatpickr.localize(flatpickr.l10ns.ru);
+flatpickr('.calendar', config);
