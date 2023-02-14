@@ -163,6 +163,16 @@
     font-size: 12px;
   }
 
+  .flatpickr-day:hover {
+    border-color: #373334;
+    border-radius: 50%;
+    margin: auto auto 13px auto;
+
+    @media (min-width: 450px) {
+      width: 70%;
+    }
+  }
+
   .flatpickr-day.selected {
     border-color: #373334;
     border-radius: 50%;

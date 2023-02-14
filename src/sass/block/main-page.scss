@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 
-.main-page__title {
+.main-page h1 {
   font-size: 40px;
   font-weight: 700;
   line-height: 125%;
@@ -25,7 +25,11 @@
 }
 
 .main-page__txt {
-  margin: 0 0 55px;
+  margin: 0 0 35px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 55px;
+  }
 }
 
 .main-page__select {

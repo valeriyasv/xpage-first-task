@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import sass from 'gulp-dart-sass';
+import postcss from 'gulp-postcss';
 import pug from 'gulp-pug';
 import rename from 'gulp-rename';
 import svgstore from 'gulp-svgstore';
@@ -8,6 +9,7 @@ import plumber from 'gulp-plumber';
 import browser from 'browser-sync';
 import terser from 'gulp-terser';
 import connect from "gulp-connect";
+import autoprefixer from 'autoprefixer';
 
 gulp.task("connect", function() {
   connect.server({
@@ -28,6 +30,9 @@ const styles = () => {
   return gulp.src('src/sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([
+      autoprefixer()
+      ]))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }

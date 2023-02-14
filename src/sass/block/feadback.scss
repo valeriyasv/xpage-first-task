@@ -77,6 +77,11 @@
   color: $white-text;
   border: 2px solid $white-text;
   max-width: 162px;
+
+  &:hover {
+    background-color: $white-text;
+    color: $main-color;
+  }
 }
 
 .feadback__details {

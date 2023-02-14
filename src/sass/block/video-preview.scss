@@ -1,5 +1,4 @@
-.video-preview__image {
-  object-fit: cover;
+.video-preview__iframe {
   width: 100%;
 
   @media (min-width: $tablet-width) {

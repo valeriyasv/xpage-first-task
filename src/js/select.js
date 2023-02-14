@@ -1,3 +1,4 @@
+window.addEventListener('DOMContentLoaded', () => {
 
   const selectSingle = document.querySelector('.select');
   const selectSingle_title = selectSingle.querySelector('.select__title');
@@ -7,7 +8,8 @@
 
 
   // Toggle menu
-  document.body.addEventListener('click', (e) => {
+
+  body.addEventListener('click', (e) => {
     if (e.target.className === 'select__title') {
       if ('active' === selectSingle.getAttribute('data-state')) {
         selectSingle.setAttribute('data-state', '');
@@ -16,7 +18,7 @@
       }
     }
     if (e.target.className !== 'select__title') {
-    selectSingle.setAttribute('data-state', '');
+      selectSingle.setAttribute('data-state', '');
     }
     console.log(e.target.className)
   });
@@ -31,15 +33,7 @@
 
   // Reset title
   const reset = document.querySelector('.reset');
-  reset.addEventListener('click', () => {
+  reset?.addEventListener('click', () => {
     selectSingle_title.textContent = selectSingle_title.getAttribute('data-default');
   });
-
-
-  // console.log(document)
-  // body.addEventListener('click',  (e) => {
-  //   console.log(e.target.className)
-  //   if (e.target.className !== selectContent) {
-  //     selectSingle.setAttribute('data-state', '');
-  //   }
-  // })
+})
