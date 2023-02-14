@@ -40,11 +40,17 @@
   }
 }
 
-.feadback__txt {
+.feadback__inputfile {
   font-size: 14px;
   color: $white-text;
   margin: 0;
   flex-shrink: 0;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 .feadback__textarea {

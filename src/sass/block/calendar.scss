@@ -115,14 +115,98 @@
   .flatpickr-weekdays {
     border-bottom: 2px solid #000;
     background: #f2f2f2;
+    // margin: 0 auto;
   }
 
+  .flatpickr-rContainer {
+    width: 100%;
+    padding: 16px 0 0;
+  }
+
+  .numInput {
+    display: none;
+  }
+
+  .dayContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    // gap: 13px;
+    padding-top: 8px;
+  }
+
+  .flatpickr-weekdaycontainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    .flatpickr-weekday {
+      font-size: 12px;
+      font-family: inherit;
+      font-weight: bold;
+      color: #373334;
+      opacity: 1;
+    }
+  }
+
+  .flatpickr-days {
+    width: 100%;
+  }
+
+  .flatpickr-day {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 13px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 12px;
+  }
+
+  .flatpickr-day.selected {
+    border-color: #373334;
+    border-radius: 50%;
+    margin: auto auto 13px auto;
+
+    @media (min-width: 450px) {
+      width: 70%;
+    }
+  }
+
+  .flatpickr-day.today {
+    border-color: #373334;
+    border-radius: 50%;
+    margin: auto auto 13px auto;
+
+    @media (min-width: 450px) {
+      width: 70%;
+    }
+  }
+
+  .numInputWrapper {
+    display: none;
+  }
+
+  .flatpickr-prev-month {
+    display: none;
+  }
 }
 
 .flatpickr-calendar.open {
   display: block;
-  border: 2px solid #000;
-  // width: 100%;
+  border: 2px solid #373334;
+  border-radius: 0;
+  width: 100%;
+  max-width: 468px;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.flatpickr-weekday {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: $main-color;
 }
 
 .flatpickr-calendar.inline {
@@ -146,6 +230,50 @@
   padding: 0;
   text-align: center;
   overflow: hidden;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Frank', sans-serif;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-image: url('../img/icons/icon-arow-calendar.svg');
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 25%;
+  }
+
+  &::after {
+    content: '';
+    background-image: url('../img/icons/icon-arow-calendar.svg');
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    transform: rotate(180deg);
+  }
+
+  .flatpickr-prev-month {
+    opacity: 0;
+  }
+
+  .flatpickr-next-month {
+    opacity: 0;
+  }
+
+  .numInputWrapper {
+    display: none;
+  }
+
+  .select-sort-mobile {
+    display: none;
+  }
+
+  // .flatpickr-monthDropdown-months {
+  //   opacity: 0;
+  // }
 }
 
 .flatpickr-calendar .flatpickr-prev-month,

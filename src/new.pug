@@ -83,17 +83,18 @@ html(lang="ru")
       section.feadback
         .wrapper
           h2.feadback__title Оставьте свой комментарий
-          form(action="")
+          form(action="" method="post" enctype="multipart/form-data")
             .feadback__wrap
               .feadback__details
                 input(type='text' placeholder='Имя' aria-label='Введите имя').feadback__input
                 input(type='text' placeholder='E-mail' aria-label='Введите электронную почту').feadback__input
                 .feadback__photo
-                  label(for="photo").feadback__label
-                    | Прикрепить фото
-                  input(type="file" value="" id="photo" aria-label='Прикрепить фото').feadback__txt
+                  input(type="file" accept="image/png, image/jpeg" name="file" id="file" multiple aria-label='Прикрепить фото').feadback__inputfile
+                  label(for="file").feadback__label
+                    span Прикрепить фото
               textarea(placeholder='Комментарий').feadback__textarea
               button(aria-label='Отправить').btn.feadback__button Отправить
     include _footer.pug
+    script(src='js/inputfile.js')
     script(src='js/script.js')
     script(src='js/burger.js')

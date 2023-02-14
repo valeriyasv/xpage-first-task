@@ -20,6 +20,13 @@
   src: url("../fonts/franklight") format("ttf");
   font-display: swap;
 }
+@font-face {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/barlowregular") format("ttf");
+  font-display: swap;
+}
 .wrapper {
   padding: 0 20px;
   max-width: 1360px;
@@ -30,9 +37,15 @@
     padding: 0 40px;
   }
 }
+@media (min-width: 1200px) {
+  .wrapper {
+    padding: 0 60px;
+  }
+}
 @media (min-width: 1700px) {
   .wrapper {
     max-width: 1500px;
+    padding: 0;
   }
 }
 
@@ -911,11 +924,17 @@ span {
   color: #ffffff;
 }
 
-.feadback__txt {
+.feadback__inputfile {
   font-size: 14px;
   color: #ffffff;
   margin: 0;
   flex-shrink: 0;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 .feadback__textarea {
@@ -1223,10 +1242,85 @@ input[type=file] {
   border-bottom: 2px solid #000;
   background: #f2f2f2;
 }
+.flatpickr-calendar .flatpickr-rContainer {
+  width: 100%;
+  padding: 16px 0 0;
+}
+.flatpickr-calendar .numInput {
+  display: none;
+}
+.flatpickr-calendar .dayContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  padding-top: 8px;
+}
+.flatpickr-calendar .flatpickr-weekdaycontainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.flatpickr-calendar .flatpickr-weekdaycontainer .flatpickr-weekday {
+  font-size: 12px;
+  font-family: inherit;
+  font-weight: bold;
+  color: #373334;
+  opacity: 1;
+}
+.flatpickr-calendar .flatpickr-days {
+  width: 100%;
+}
+.flatpickr-calendar .flatpickr-day {
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 13px;
+  font-family: "Barlow", sans-serif;
+  font-size: 12px;
+}
+.flatpickr-calendar .flatpickr-day.selected {
+  border-color: #373334;
+  border-radius: 50%;
+  margin: auto auto 13px auto;
+}
+@media (min-width: 450px) {
+  .flatpickr-calendar .flatpickr-day.selected {
+    width: 70%;
+  }
+}
+.flatpickr-calendar .flatpickr-day.today {
+  border-color: #373334;
+  border-radius: 50%;
+  margin: auto auto 13px auto;
+}
+@media (min-width: 450px) {
+  .flatpickr-calendar .flatpickr-day.today {
+    width: 70%;
+  }
+}
+.flatpickr-calendar .numInputWrapper {
+  display: none;
+}
+.flatpickr-calendar .flatpickr-prev-month {
+  display: none;
+}
 
 .flatpickr-calendar.open {
   display: block;
-  border: 2px solid #000;
+  border: 2px solid #373334;
+  border-radius: 0;
+  width: 100%;
+  max-width: 468px;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.flatpickr-weekday {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: #373334;
 }
 
 .flatpickr-calendar.inline {
@@ -1250,6 +1344,40 @@ input[type=file] {
   padding: 0;
   text-align: center;
   overflow: hidden;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Frank", sans-serif;
+  position: relative;
+}
+.flatpickr-calendar .flatpickr-months::before {
+  content: "";
+  background-image: url("../img/icons/icon-arow-calendar.svg");
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 25%;
+}
+.flatpickr-calendar .flatpickr-months::after {
+  content: "";
+  background-image: url("../img/icons/icon-arow-calendar.svg");
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 25%;
+  right: 0;
+  transform: rotate(180deg);
+}
+.flatpickr-calendar .flatpickr-months .flatpickr-prev-month {
+  opacity: 0;
+}
+.flatpickr-calendar .flatpickr-months .flatpickr-next-month {
+  opacity: 0;
+}
+.flatpickr-calendar .flatpickr-months .numInputWrapper {
+  display: none;
+}
+.flatpickr-calendar .flatpickr-months .select-sort-mobile {
+  display: none;
 }
 
 .flatpickr-calendar .flatpickr-prev-month,
