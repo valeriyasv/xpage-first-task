@@ -23,7 +23,7 @@ return gulp.src(['src/*.pug', '!src/_*.pug'])
   .pipe(pug({
     pretty:true
   }))
-  .pipe(gulp.dest('publish'));
+  .pipe(gulp.dest('public'));
 }
 
 const styles = () => {
@@ -33,7 +33,7 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
       ]))
-    .pipe(gulp.dest('publish/css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('public/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
@@ -44,13 +44,13 @@ const copy = (done) => {
   ], {
   base: 'src'
   })
-  .pipe(gulp.dest('publish'))
+  .pipe(gulp.dest('public'))
   done();
   }
 
 const copyImages = () => {
   return gulp.src('src/img/**/*.{jpg,svg,png}')
-  .pipe(gulp.dest('publish/img'))
+  .pipe(gulp.dest('public/img'))
 }
 
 const sprite = () => {
@@ -64,14 +64,14 @@ const sprite = () => {
 const scripts = () => {
   return gulp.src('src/js/*.js')
   .pipe(terser())
-  .pipe(gulp.dest('publish/js'));
+  .pipe(gulp.dest('public/js'));
 }
 
 
 const server = (done) => {
   return browser.init({
   server: {
-  baseDir: 'publish'
+  baseDir: 'public'
   },
   cors: true,
   notify: false,
@@ -80,7 +80,7 @@ const server = (done) => {
   done();
 }
 
-export const publish = gulp.series(
+export const build = gulp.series(
   // clean,
   copy,
   copyImages,
