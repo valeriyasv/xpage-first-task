@@ -158,6 +158,10 @@
 .page-new__tags {
   width: 100%;
   max-width: 339px;
+
+  span {
+    font-weight: 600;
+  }
 }
 
 .page-new__share {

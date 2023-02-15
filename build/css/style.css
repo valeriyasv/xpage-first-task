@@ -850,6 +850,9 @@ span {
   width: 100%;
   max-width: 339px;
 }
+.page-new__tags span {
+  font-weight: 600;
+}
 
 .page-new__share {
   width: 100%;
