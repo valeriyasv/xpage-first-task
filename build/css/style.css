@@ -3,28 +3,28 @@
   font-family: "Frank";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/frankbold") format("ttf");
+  src: url("../fonts/frankbold.ttf") format("ttf");
   font-display: swap;
 }
 @font-face {
   font-family: "Frank";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/frankregular") format("ttf");
+  src: url("../fonts/frankregular.ttf") format("ttf");
   font-display: swap;
 }
 @font-face {
-  font-family: "Frank";
+  font-family: "Frank-light";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/franklight") format("ttf");
+  src: url("../fonts/franklight.ttf") format("ttf");
   font-display: swap;
 }
 @font-face {
   font-family: "Barlow";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/barlowregular") format("ttf");
+  src: url("../fonts/barlowregular.ttf") format("ttf");
   font-display: swap;
 }
 .wrapper {
@@ -84,6 +84,7 @@ span {
   color: #9f0023;
   border: 2px solid #9f0023;
   width: 224px;
+  font-weight: 600;
 }
 .main-header__button:hover {
   background-color: #9f0023;
@@ -160,6 +161,10 @@ span {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
 }
 
 .main-header__search:hover {
@@ -399,6 +404,7 @@ span {
   color: #9f0023;
   font-size: 14px;
   margin-right: 40px;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .card__tag {
@@ -449,13 +455,22 @@ span {
 .card__title {
   font-size: 16px;
   margin-top: 12px;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .card__title {
     font-size: 20px;
   }
 }
-@media (min-width: 1200px) {
+.card__title--main {
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .card__title--main {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 768px) {
   .card__title--main {
     margin-bottom: 70px;
   }
@@ -522,6 +537,10 @@ span {
   .card__desc {
     margin-bottom: 46px;
   }
+}
+
+.card__text {
+  font-weight: 300;
 }
 
 .news-cards {
@@ -605,6 +624,7 @@ span {
 .footer {
   background-color: #ffffff;
   padding: 59px 0 49px;
+  font-weight: 400;
 }
 
 .footer__slogan {
@@ -878,6 +898,10 @@ span {
   margin-top: 52px;
 }
 
+.ytp-large-play-button {
+  display: none;
+}
+
 .hr {
   max-width: 339px;
   height: 2px;
@@ -1029,6 +1053,7 @@ input[type=file] {
 
 .btn {
   background-color: transparent;
+  font-family: "Frank", sans-serif;
   font-weight: 600;
   font-size: 16px;
   border-radius: 56px;
@@ -1094,6 +1119,7 @@ input[type=file] {
   display: flex;
   align-items: center;
   height: 60px;
+  font-weight: 400;
   padding: 8px 24px;
   border: solid 2px #373334;
   cursor: pointer;
@@ -1232,11 +1258,13 @@ input[type=file] {
   font-family: inherit;
   font-size: 16px;
   color: inherit;
+  font-weight: 400;
 }
 .calendar::placeholder {
   font-family: inherit;
   font-size: 16px;
   color: inherit;
+  font-weight: 400;
 }
 
 .flatpickr-input {
@@ -1454,6 +1482,7 @@ input[type=file] {
 .breadcrumb__item {
   font-size: 16px;
   margin-left: 3px;
+  font-weight: 400;
 }
 .breadcrumb__item:hover {
   text-decoration-line: underline;

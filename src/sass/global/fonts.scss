@@ -2,7 +2,7 @@
   font-family: "Frank";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/frankbold") format("ttf");
+  src: url("../fonts/frankbold.ttf") format("ttf");
   font-display: swap;
 }
 
@@ -10,15 +10,15 @@
   font-family: "Frank";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/frankregular") format("ttf");
+  src: url("../fonts/frankregular.ttf") format("ttf");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Frank";
+  font-family: "Frank-light";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/franklight") format("ttf");
+  src: url("../fonts/franklight.ttf") format("ttf");
   font-display: swap;
 }
 
@@ -26,6 +26,6 @@
   font-family: "Barlow";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/barlowregular") format("ttf");
+  src: url("../fonts/barlowregular.ttf") format("ttf");
   font-display: swap;
 }

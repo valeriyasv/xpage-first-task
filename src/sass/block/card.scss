@@ -45,6 +45,7 @@
   color: $accent-color;
   font-size: 14px;
   margin-right: 40px;
+  font-weight: 400;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -94,13 +95,20 @@
 .card__title {
     font-size: 16px;
     margin-top: 12px;
+    font-weight: 600;
 
     @media (min-width: $tablet-width) {
       font-size: 20px;
     }
 
     &--main {
-      @media (min-width: $desktop-width) {
+      margin-bottom: 30px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 50px;
+      }
+
+      @media (min-width: $tablet-width) {
         margin-bottom: 70px;
       }
     }
@@ -170,4 +178,8 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 46px;
   }
+}
+
+.card__text {
+  font-weight: 300;
 }

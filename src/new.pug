@@ -5,6 +5,7 @@ html(lang="ru")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(href="./css/style.css" rel="stylesheet")
+    link(href="https://fonts.cdnfonts.com/css/frank" rel="stylesheet")
     title New
     link(rel="preload" href="fonts/frankbold.ttf" as="font" type="font/ttf" crossorigin="anonymous")
     link(rel="preload" href="fonts/frankregular.ttf" as="font" type="font/ttf" crossorigin="anonymous")
@@ -37,7 +38,7 @@ html(lang="ru")
             br
             p Напомним, перепрофилировать родильный дом решили в связи с ежедневным большим приростом златоустовцев, заболевших ковид-19.  За это время лечение на госпитальной базе прошли свыше 1000 пациентов.
             .video-preview
-              iframe(width="560" height="315" src="https://www.youtube.com/embed/VP6Cl2Z8M34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen).video-preview__iframe
+              video(poster='img/main-new.jpg' src="video/test-video.mp4" controls muted).video-preview__iframe
               button(aria-label='Воспроизвести видео').video-preview__play
                 svg(width='136' height='136')
                   use(xlink:href="img/sprite.svg#icon-button-video")
@@ -95,6 +96,7 @@ html(lang="ru")
               textarea(placeholder='Комментарий').feadback__textarea
               button(aria-label='Отправить').btn.feadback__button Отправить
     include _footer.pug
+    script(src='js/video.js')
     script(src='js/inputfile.js')
     script(src='js/script.js')
     script(src='js/burger.js')

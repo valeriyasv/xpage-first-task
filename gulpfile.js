@@ -40,6 +40,7 @@ const styles = () => {
 const copy = (done) => {
   gulp.src([
   'src/fonts/*.ttf',
+  'src/video/*.mp4',
   ], {
   base: 'src'
   })
