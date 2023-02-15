@@ -369,9 +369,6 @@ span {
 .card:hover {
   box-shadow: 0 0 20px 10px rgb(206, 206, 206);
 }
-.card:hover .card__content {
-  padding-left: 5px;
-}
 @media (min-width: 768px) {
   .card {
     margin: 0;

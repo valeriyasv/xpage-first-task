@@ -86,7 +86,6 @@ export const build = gulp.series(
   copyImages,
   gulp.parallel(
   sprite,
-  scripts,
   styles,
   gulpPug,
   ),
