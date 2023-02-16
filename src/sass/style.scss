@@ -1,6 +1,7 @@
 // @import url('https://fonts.cdnfonts.com/css/frank?styles=58842');
 @import "global/fonts.scss";
 @import "global/var.scss";
+@import "block/calendar.scss";
 @import "global/mixins.scss";
 @import "block/wrapper.scss";
 @import "global/common.scss";
@@ -21,7 +22,6 @@
 @import "block/btn.scss";
 @import "block/site-list.scss";
 @import "block/select.scss";
-@import "block/calendar.scss";
 @import "block/breadcrumb.scss";
 @import "global/normalize.scss";
 

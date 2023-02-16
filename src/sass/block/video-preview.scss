@@ -22,6 +22,11 @@
   transform: translate(-50%, -50%);
   cursor: pointer;
   padding: 0;
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
 
 .video-preview {
