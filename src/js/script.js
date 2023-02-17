@@ -1,4 +1,4 @@
-config = {
+const config = {
   dateFormat: "M-d",
   numInput : false,
   locale: 'russian',

@@ -2,12 +2,12 @@ import gulp from 'gulp';
 import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import pug from 'gulp-pug';
-import rename from 'gulp-rename';
+// import rename from 'gulp-rename';
 import svgstore from 'gulp-svgstore';
 import svgo from 'gulp-svgo';
 import plumber from 'gulp-plumber';
 import browser from 'browser-sync';
-// import terser from 'gulp-terser';
+import terser from 'gulp-terser';
 import connect from "gulp-connect";
 import autoprefixer from 'autoprefixer';
 
@@ -58,15 +58,15 @@ const sprite = () => {
   return gulp.src('src/img/icons/*.svg')
   .pipe(svgo())
   .pipe(svgstore())
-  .pipe(rename('sprite.svg'))
+  // .pipe(rename('sprite.svg'))
   .pipe(gulp.dest('src/img'));
   }
 
-// const scripts = () => {
-//   return gulp.src('src/js/*.js')
-//   .pipe(terser())
-//   .pipe(gulp.dest('public/js'));
-// }
+const scripts = () => {
+  return gulp.src('src/js/*.js')
+  .pipe(terser())
+  .pipe(gulp.dest('public/js'));
+}
 
 
 const server = (done) => {
@@ -94,7 +94,7 @@ export const build = gulp.series(
 
 const watcher = () => {
   gulp.watch('src/sass/**/*.scss', gulp.series(styles));
-  // gulp.watch('src/js/*.js', gulp.series(scripts));
+  gulp.watch('src/js/*.js', gulp.series(scripts));
   gulp.watch('src/*.pug', gulp.series(gulpPug));
 }
 
@@ -104,7 +104,7 @@ export default gulp.series(
   copyImages,
   gulp.parallel(
     styles,
-    // scripts,
+    scripts,
     sprite),
     gulp.series(
       server,

@@ -7,7 +7,8 @@
   color: $accent-color;
   border: 2px solid $accent-color;
   width: 224px;
-  font-weight: 600;
+  font-family: 'LibreFrank', sans-serif;
+  font-weight: 500;
 
   &:hover {
     background-color: $accent-color;
@@ -87,7 +88,8 @@
   align-items: center;
   justify-content: space-between;
   font-style: normal;
-  font-weight: 700;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 500;
   font-size: 16px;
   line-height: 16px;
 }

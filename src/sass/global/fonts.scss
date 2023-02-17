@@ -1,4 +1,20 @@
 @font-face {
+  font-family: "LibreFrank";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/librefranklinlight.ttf") format("ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LibreFrank";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/librefranklinmedium.ttf");
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Frank";
   font-style: normal;
   font-weight: 700;
@@ -29,3 +45,4 @@
   src: url("../fonts/barlowregular.ttf") format("ttf");
   font-display: swap;
 }
+

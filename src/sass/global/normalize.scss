@@ -30,7 +30,8 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+  // font: inherit;
+  border-radius: 0;
 }
 
 strong {

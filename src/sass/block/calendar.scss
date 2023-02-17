@@ -13,44 +13,44 @@
   position: relative;
   z-index: 1;
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    right: 24px;
-    display: block;
-    width: 10px;
-    height: 2px;
-    transition: all 0.3s ease-out;
-    background-color: $main-color;
-    transform: translate(-3px, -50%) rotate(45deg);
-    z-index: 2;
-  }
+  // &::before,
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   right: 24px;
+  //   display: block;
+  //   width: 10px;
+  //   height: 2px;
+  //   transition: all 0.3s ease-out;
+  //   background-color: $main-color;
+  //   transform: translate(-3px, -50%) rotate(45deg);
+  //   z-index: 2;
+  // }
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    right: 24px;
-    display: block;
-    width: 10px;
-    height: 2px;
-    transition: all 0.3s ease-out;
-    background-color: $main-color;
-    transform: translate(-3px, -50%) rotate(45deg);
-  }
+  // &::before,
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   right: 24px;
+  //   display: block;
+  //   width: 10px;
+  //   height: 2px;
+  //   transition: all 0.3s ease-out;
+  //   background-color: $main-color;
+  //   transform: translate(-3px, -50%) rotate(45deg);
+  // }
 
-  &::after {
-    transform: translate(3px, -50%) rotate(-45deg);
-  }
+  // &::after {
+  //   transform: translate(3px, -50%) rotate(-45deg);
+  // }
 
-  &:hover {
+  // &:hover {
 
-    &::before,
-    &::after {
-      background-color: $accent-color;
-    }
-  }
+  //   &::before,
+  //   &::after {
+  //     background-color: $accent-color;
+  //   }
+  // }
 
   &:hover {
     border-color: $accent-color;
@@ -72,6 +72,10 @@
     color: inherit;
     font-weight: 400;
   }
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
 }
 
 .flatpickr-input {
