@@ -14,7 +14,8 @@
 
   h2:not([class]) {
     font-size: 20px;
-    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     line-height: 135%;
     margin: 0;
   }
@@ -22,12 +23,14 @@
   p:not([class]) {
     font-size: 16px;
     font-weight: 300;
+    font-family: 'Roboto', sans-serif;
     line-height: 162%;
     margin: 0;
   }
 
   figcaption:not([class]) {
     font-size: 14px;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     line-height: 135%;
     color: $light-color;
@@ -41,7 +44,7 @@
     margin: 0;
     font-size: 16px;
     font-weight: 300;
-    font-family: 'LibreFrank', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 162%;
     margin: 26px 0 50px;
     padding-bottom: 48px;
@@ -162,7 +165,7 @@
 
   span {
     font-weight: 500;
-    font-family: 'LibreFrank', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
 }
 

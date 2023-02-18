@@ -78,6 +78,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
 
+input[type=date]
+::-webkit-datetime-edit
+::-webkit-datetime-edit-fields-wrapper
+::-webkit-datetime-edit-text
+::-webkit-datetime-edit-month-field
+::-webkit-datetime-edit-day-field
+::-webkit-datetime-edit-year-field
+::-webkit-inner-spin-button
+::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
 .flatpickr-input {
   // position: relative;
   // &::before,

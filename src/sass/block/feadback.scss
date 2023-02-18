@@ -18,6 +18,8 @@
 }
 
 .feadback__input {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   border: none;
   outline: none;
   background-color: transparent;
@@ -54,6 +56,8 @@
 }
 
 .feadback__textarea {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   border: none;
   outline: none;
   background-color: transparent;
@@ -106,19 +110,20 @@ input[type=file] {
 .feadback__label {
   color: $white-text;
   font-size: 14px;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   cursor: pointer;
 
   &::before {
     content: "";
-    background-image: url('../img/icons/icon-clip.svg');
+    background-image: url('../img/icons/clip.svg');
     background-repeat: no-repeat;
     z-index: 3;
     object-fit: contain;
     width: 20px;
     height: 20px;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 5px;
     vertical-align: middle;
   }
 

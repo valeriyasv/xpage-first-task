@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "LibreFrank";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/librefranklinlight.ttf") format("ttf");
+  src: url("../fonts/robotolight.ttf") format("ttf");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "LibreFrank";
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/librefranklinmedium.ttf");
+  font-weight: 300;
+  src: url("../fonts/robotomedium.ttf") format("ttf");
   font-display: swap;
 }
 
@@ -31,18 +31,9 @@
 }
 
 @font-face {
-  font-family: "Frank-light";
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/franklight.ttf") format("ttf");
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Barlow";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/barlowregular.ttf") format("ttf");
   font-display: swap;
 }
-
