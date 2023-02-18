@@ -18,6 +18,10 @@
   font-family: inherit;
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
   &--current {
     &::after {
       content: '';

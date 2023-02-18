@@ -116,12 +116,12 @@ input[type=file] {
 
   &::before {
     content: "";
-    background-image: url('../img/icons/clip.svg');
+    background-image: url('../img/icons/icon-clip.svg');
     background-repeat: no-repeat;
     z-index: 3;
     object-fit: contain;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     display: inline-block;
     margin-right: 5px;
     vertical-align: middle;
