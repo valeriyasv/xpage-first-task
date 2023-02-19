@@ -56,6 +56,10 @@
     border-color: $accent-color;
     color: $accent-color;
     background-image: url('../img/icons/icon-calendar-color.svg');
+
+    &::placeholder {
+      color: $accent-color;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -69,7 +73,7 @@
   &::placeholder {
     font-family: inherit;
     font-size: 16px;
-    color: inherit;
+    color: $main-color;
     font-weight: 400;
   }
 }
@@ -78,15 +82,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
 
-input[type=date]
-::-webkit-datetime-edit
-::-webkit-datetime-edit-fields-wrapper
-::-webkit-datetime-edit-text
-::-webkit-datetime-edit-month-field
-::-webkit-datetime-edit-day-field
-::-webkit-datetime-edit-year-field
-::-webkit-inner-spin-button
-::-webkit-calendar-picker-indicator {
+input[type=date]::-webkit-inner-spin-button {
   opacity: 0;
 }
 
