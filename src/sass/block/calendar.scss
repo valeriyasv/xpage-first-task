@@ -63,13 +63,13 @@
   @media (min-width: $desktop-width) {
     margin: 0 50px 0 0;
   }
+}
 
-  &::placeholder {
-    font-family: inherit;
-    font-size: 16px;
-    color: $main-color;
-    font-weight: 400;
-  }
+input[type=date]::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 16px;
+  color: $main-color;
+  font-weight: 400;
 }
 
 input[type=date]::-webkit-calendar-picker-indicator {
